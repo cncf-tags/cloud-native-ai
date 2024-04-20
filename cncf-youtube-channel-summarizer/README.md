@@ -17,7 +17,7 @@ flowchart TD
 2. Authentication using Google Client API. 
 3. Retrieve Youtube videos from CNCF channel. 
 4. Download transcripts from each video. 
-5. Use LLM such as GPT-4 via LangChian/LlamaIndex to generate keywords and summary of the transcripts. 
+5. Use LLM such as GPT-4 via LangChain/LlamaIndex to generate keywords and summary of the transcripts. 
 6. Use LLM to categorize the summaries. 
 7. Build a dashboard that use the categorized summaries as navigation of video content. 
 8. Publish the dashboard and summaries to GitHub Pages using GitHub Actions workflow. 
