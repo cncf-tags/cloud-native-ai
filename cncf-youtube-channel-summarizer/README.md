@@ -5,7 +5,7 @@
 * Use Cloud Native infrastructure to effectively serve Artificial Intelligence (AI) applications.
 # Workflow
 ```mermaid 
-flowchart TD 
+flowchart TD  
     id(GitHub Actions) --> id2(Google Client API) --> 
     id3(List CNCF YouTube Videos) --> id4(Download Video Transcripts)--> 
     id5(LLM and LangChain) --> id6(Summarize Transcripts) --> 
