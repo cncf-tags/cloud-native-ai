@@ -13,7 +13,7 @@ flowchart TD
     id9(Publish to GitHub Pages) --> id10(User Access via GitHub Pages)
 ```
 
-1. Github Actions trigers manually or on a schedule. 
+1. Github Actions are trigered manually or on a schedule. 
 2. Authentication using Google Client API. 
 3. Retrieve Youtube videos from CNCF channel. 
 4. Download transcripts from each video. 
