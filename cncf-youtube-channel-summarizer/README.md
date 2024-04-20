@@ -23,7 +23,7 @@ flowchart TD
 8. Publish the dashboard and summaries to GitHub Pages using GitHub Actions workflow. 
 9. Published contents are accessible via the GitHub Pages URL.
 
-## Functions
+## Functions 
 * Search by keywords (speaker/company names, events, projects, technologies, etc).
 * Search by content (Similarity Search)
 * Basic dashboard 
