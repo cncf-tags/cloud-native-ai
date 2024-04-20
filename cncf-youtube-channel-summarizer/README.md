@@ -24,4 +24,5 @@ flowchart TD
 
 ## Functions 
 * Search by keywords (speaker/company names, events, projects, technologies, etc). 
-* Search by content (Similarity Search) * Basic dashboard
+* Search by content (Similarity Search) 
+* Basic dashboard
