@@ -2,7 +2,7 @@
 
 ## Project Goals
 * Use Large Language Model (LLM) to summarize, categorize videos from CNCF YouTube channel.
-
+* Use Cloud Native infrastructure to effectively serve Artificial Intelligence (AI) applications.
 # Workflow
 ```mermaid 
 flowchart TD 
