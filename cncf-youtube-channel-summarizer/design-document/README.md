@@ -113,3 +113,43 @@ flan_ul2_model = Model(
 chain = load_summarize_chain(llm=flan_ul2_model.to_langchain(), chain_type="map_reduce", verbose=True)
 summary = chain.run(texts)
 ```
+## GitHub Actions
+* Extract and Summarize YouTube Video Transcripts once a month.
+```yml
+name: Extract and Summarize YouTube Video Transcripts
+
+on:
+  push:
+  schedule: 
+   - cron: "0 0 1 * * "
+
+jobs:
+  process_video:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install Dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Extract Transcript
+        run: python extract_transcript.py
+
+      - name: Summarize Transcript
+        run: python transcript_summarizer.py
+
+      - name: Commit Changes
+        run: |
+          git config --global user.name 'NAME'
+          git config --global user.email 'EMAIL'
+          git add transcript.txt Summary.txt
+          git commit -m "Add transcript and summary" --signoff
+          git push
+```
