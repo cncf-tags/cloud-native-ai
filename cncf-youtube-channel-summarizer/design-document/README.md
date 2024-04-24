@@ -7,6 +7,7 @@
 ```py
 
 #Access transcripts by URL
+# Document: https://python.langchain.com/docs/integrations/document_loaders/youtube_transcript/
 
 from langchain.document_loaders import YoutubeLoader
 loader = YoutubeLoader.from_youtube_url(
@@ -21,6 +22,9 @@ transcript = loader.load()
 ```py
 
 #Access transcripts by youtube data api v3 API.
+#Access playlist_id: https://developers.google.com/youtube/v3/docs/channels/list
+#Access video_id: https://developers.google.com/youtube/v3/docs/playlistItems/list
+#Access transcripts: https://github.com/jdepoix/youtube-transcript-api
 
 from googleapiclient.discovery import build
 from youtube_transcript_api import YouTubeTranscriptApi
@@ -70,7 +74,8 @@ def main():
         cap = get_video_captions(video_id)
         print(cap)
         return cap
-main()
+if __name__ == "__main__":
+    main()
 ```
 ### About Google API access
 [Get API_KEY Video Tutorial](https://www.youtube.com/watch?v=DuudSp4sHmg)  
