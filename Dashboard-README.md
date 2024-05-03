@@ -1,5 +1,5 @@
 # Dashboard for visualizing conference summaries
-## Github Page URL: https://loveyourself999.github.io/conference-dashboard/
+## Github Page URL: https://cncf-tags.github.io/cloud-native-ai/
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 ***
 ## Overall Idea
@@ -15,7 +15,7 @@ Make sure you installed npm by
 ~~~Bash
 npm -v
 
-// if not installed run
+// when not installed, run
 npm install -g npm@latest
 ~~~
 Create a next.js file using command "npx create-next-app + your file name"
@@ -36,16 +36,14 @@ First create a repository for the app, push the code.
 Enable GitHub Pages:
 1. Go to your repository's Settings tab
 2. Click "Pages" in the sidebar
-3. Under "Build and Deployment", select "GitHub Actions" as the source:
-<img width="1314" alt="Screen Shot 2024-04-26 at 4 57 09 PM" src="https://github.com/LoveYourself999/conference-dashboard/assets/54390035/c9999bf4-1c6c-45ee-b1e6-52d6e624b079">
+3. Under "Build and Deployment", select "GitHub Actions" as the source
 
-
-You should see your site deployed to GitHub Pages in a few minutes. 
+Now you should see your site deployed to GitHub Pages in a few minutes. 
 
 ***
 ## To do
-- Use D3 library for data visualization(example: https://github.com/nicolashery/example-d3-react?tab=readme-ov-file)
 - Fetch data from the summaries data collected by Github Action
+- Use sidebar to navigate different conferences, render the graph based on the conference name
 ## Resources
 - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
