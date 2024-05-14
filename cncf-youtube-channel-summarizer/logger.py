@@ -6,7 +6,7 @@ def setup_logger(name, level=None):
     if level:
         level_value = int(level)
     else:
-        level_value = int(os.environ.get("SEINE_SAILOR_LOG_LEVEL", logging.INFO))
+        level_value = int(os.environ.get("TranscriptSummarizer", logging.INFO))
     logger = logging.getLogger(name)
     logger.setLevel(level_value)
 
