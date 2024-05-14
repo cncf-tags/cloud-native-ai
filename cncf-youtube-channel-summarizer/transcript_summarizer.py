@@ -107,17 +107,17 @@ class TranscriptSummarizer():
             df = pd.DataFrame(data)
             df.to_csv('cncf_video_summary.csv', mode='a', index=False, header=False)
 
-
-model_id = "ibm-mistralai/mixtral-8x7b-instruct-v01-q"
-summary_param = {
-                'TEMPERATURE':0.7,
-                'MAX_NEW_TOKENS':512,
-                'TOP_K': 10,
-                }
-keywords_param = {
-                 'TEMPERATURE': 0.1,
-                 'MAX_NEW_TOKENS': 128,
-                 'TOP_K': 10,
-                 }
-transcript_path = 'CNCF_video_information.json'
-summarizer = TranscriptSummarizer(model_id, summary_param, keywords_param, transcript_path).run()
+if __name__ == "__main__":
+    model_id = "ibm-mistralai/mixtral-8x7b-instruct-v01-q"
+    summary_param = {
+                    'TEMPERATURE':0.7,
+                    'MAX_NEW_TOKENS':512,
+                    'TOP_K': 10,
+                    }
+    keywords_param = {
+                     'TEMPERATURE': 0.1,
+                     'MAX_NEW_TOKENS': 128,
+                     'TOP_K': 10,
+                     }
+    transcript_path = 'CNCF_video_information.json'
+    summarizer = TranscriptSummarizer(model_id, summary_param, keywords_param, transcript_path).run()
