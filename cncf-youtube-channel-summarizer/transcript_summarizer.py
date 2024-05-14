@@ -87,11 +87,8 @@ class TranscriptSummarizer():
         cncf_video_summary.to_csv('cncf_video_summary.csv', index=False)
 
         for key in self.videos_dict.keys():
-            i += 1
             transcript = self.videos_dict[key]['transcript'][:100]
             print(len(transcript.split(' ')))
-            if i == 2:
-                break
             try:
                 summary, keywords = self.LLM_summarizer(self.llm_summary.to_langchain(), self.llm_keywords.to_langchain(), transcript,
                                                chunk_size, chunk_overlap, key)
