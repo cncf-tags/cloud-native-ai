@@ -1,0 +1,8 @@
+google-api-python-client
+youtube_transcript_api
+langchain
+einops
+accelerate
+bitsandbytes
+xformers
+tenacity
