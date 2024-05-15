@@ -14,6 +14,7 @@ class TranscriptSummarizer():
     def __init__(self, model_id, summary_param, keywords_param, transcript_path):
         self.APIKEY = os.environ['WATSONX_KEY']
         self.project_id = os.environ['WATSONX_PROJECT_ID']
+        self.url = os.environ['WATSONX_URL']
         self.model_id = model_id
         self.summary_param = summary_param
         self.keywords_param = keywords_param
@@ -26,7 +27,7 @@ class TranscriptSummarizer():
             model_id=self.model_id,
             credentials={
                 "apikey": self.APIKEY,
-                "url": "https://us-south.ml.cloud.ibm.com"
+                "url": self.url
             },
             project_id=self.project_id,
             params=self.summary_param
@@ -36,7 +37,7 @@ class TranscriptSummarizer():
             model_id=self.model_id,
             credentials={
                 "apikey": self.APIKEY,
-                "url": "https://us-south.ml.cloud.ibm.com"
+                "url": self.url
             },
             project_id=self.project_id,
             params=self.keywords_param
