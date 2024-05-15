@@ -29,11 +29,7 @@ class TranscriptSummarizer():
                 "url": "https://us-south.ml.cloud.ibm.com"
             },
             project_id=self.project_id,
-            params={
-                'TEMPERATURE': 0.7,
-                'MAX_NEW_TOKENS': 512,
-                'TOP_K': 10,
-            }
+            params=self.summary_param
         )
 
         llm_keywords = Model(
@@ -43,11 +39,7 @@ class TranscriptSummarizer():
                 "url": "https://us-south.ml.cloud.ibm.com"
             },
             project_id=self.project_id,
-            params={
-                'TEMPERATURE': 0.1,
-                'MAX_NEW_TOKENS': 128,
-                'TOP_K': 10,
-            }
+            params=self.keywords_param
         )
         return llm_summary, llm_keywords
 
