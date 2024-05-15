@@ -4,8 +4,8 @@ from transcript_summarizer import TranscriptSummarizer
 from googleapiclient.discovery import build
 
 def run():
-    YOUR_API_KEY = os.environ['google_client_api']
-    CHANNEL_ID = 'UCvqbFHwN-nwalWPjPUKpvTA'
+    YOUR_API_KEY = os.environ['GOOGLE_API_KEY']  ## GOOGLE_API_KEY for extracting youtube videos.
+    CHANNEL_ID = 'UCvqbFHwN-nwalWPjPUKpvTA'   ## This channel id is extracted from  CNCF youtube video url.
     youtube = build('youtube', 'v3', developerKey=YOUR_API_KEY)
     videos_dict = get_video_info(youtube, CHANNEL_ID) ## extract all video_information, and store them
 

@@ -14,6 +14,7 @@ class TranscriptSummarizer():
     def __init__(self, model_id, summary_param, keywords_param, transcript_path):
         self.APIKEY = os.environ['WATSONX_KEY']
         self.project_id = os.environ['WATSONX_PROJECT_ID']
+        self.url = os.environ['WATSONX_URL']
         self.model_id = model_id
         self.summary_param = summary_param
         self.keywords_param = keywords_param
@@ -26,35 +27,27 @@ class TranscriptSummarizer():
             model_id=self.model_id,
             credentials={
                 "apikey": self.APIKEY,
-                "url": "https://us-south.ml.cloud.ibm.com"
+                "url": self.url
             },
             project_id=self.project_id,
-            params={
-                'TEMPERATURE': 0.7,
-                'MAX_NEW_TOKENS': 512,
-                'TOP_K': 10,
-            }
+            params=self.summary_param
         )
 
         llm_keywords = Model(
             model_id=self.model_id,
             credentials={
                 "apikey": self.APIKEY,
-                "url": "https://us-south.ml.cloud.ibm.com"
+                "url": self.url
             },
             project_id=self.project_id,
-            params={
-                'TEMPERATURE': 0.1,
-                'MAX_NEW_TOKENS': 128,
-                'TOP_K': 10,
-            }
+            params=self.keywords_param
         )
         return llm_summary, llm_keywords
 
     def LLM_summarizer(self, llm_summary, llm_keywords, transcript, chunk_size, chunk_overlap, key):
         text_splitter = RecursiveCharacterTextSplitter(chunk_size=chunk_size, chunk_overlap=chunk_overlap)
         texts = text_splitter.create_documents([transcript])
-        map_summary_template = open('prompt/chunks_summary_prompt1.txt').readlines()
+        map_summary_template = open('prompt/chunks_summary_prompt.txt').readlines()
         map_summary_template = ''.join(map_summary_template)
         combine_summary_template = open('prompt/combine_summary_prompt.txt').readlines()
         combine_summary_template = ''.join(combine_summary_template)
