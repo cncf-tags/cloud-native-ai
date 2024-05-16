@@ -1,0 +1,46 @@
+name: Run transcripts-summarization Pipline
+env:
+    WATSONX_KEY: ${{secrets.WATSONX_KEY}}
+    WATSONX_PROJECT_ID: ${{secrets.WATSONX_PROJECT_ID}}
+    WATSONX_URL: ${{secrets.WATSONX_URL}}
+on:
+  workflow_dispatch:
+
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'  # Specify the Python version you need
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r cncf-youtube-channel-summarizer/requirements.txt
+
+    - name: Do Summarization by LLM
+      run: | 
+           python cncf-youtube-channel-summarizer/transcript_summarizer.py  
+
+    - name: Commit Change for "cncf_video_summary.csv"
+      run: |
+          git config --global user.name 'Yuhao Chen'
+          git config --global user.email 'yuhao.chenyh@gmail.com'
+          git add cncf-youtube-channel-summarizer/data/cncf_video_summary.csv || exit 0
+          git commit -m "Add Summaries and Keywords" --signoff || exit 0
+          git push
+
+    - name: Commit Change for "missed_video_id.txt"
+      run: |
+          git config --global user.name 'Yuhao Chen'
+          git config --global user.email 'yuhao.chenyh@gmail.com'
+          git add cncf-youtube-channel-summarizer/data/missed_video_id.txt || exit 0
+          git commit -m "Add missed_video_id" --signoff || exit 0
+          git push
