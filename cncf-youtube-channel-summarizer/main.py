@@ -20,5 +20,5 @@ def run():
         'MAX_NEW_TOKENS': 128,
         'TOP_K': 10,
     }
-    transcript_path = 'CNCF_video_information.json'
+    transcript_path = 'data/CNCF_video_information.json'
     summarizer = TranscriptSummarizer(model_id, summary_param, keywords_param, transcript_path).run() # do summarization
