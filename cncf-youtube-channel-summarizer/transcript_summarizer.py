@@ -69,25 +69,20 @@ class TranscriptSummarizer():
 
     @retry(stop=stop_after_attempt(3), wait=wait_fixed(2))
     def run(self):
-        i = 0
-        missed_video_id = []
-        print(self.llm_summary.get_details())
-
         max_sequence_length = self.llm_summary.get_details()['model_limits']['max_sequence_length']
         chunk_size = max_sequence_length - 1000
         chunk_overlap = 50
         cncf_video_summary = pd.DataFrame(columns=['video_id', 'video_title', 'summary', 'keywords'])
-        cncf_video_summary.to_csv('cncf_video_summary.csv', index=False)
+        cncf_video_summary.to_csv('cncf-youtube-channel-summarizer/data/cncf_video_summary.csv', index=False)
 
         for key in self.videos_dict.keys():
-            transcript = self.videos_dict[key]['transcript'][:100]
-            print(len(transcript.split(' ')))
+            transcript = self.videos_dict[key]['transcript']
             try:
                 summary, keywords = self.LLM_summarizer(self.llm_summary.to_langchain(), self.llm_keywords.to_langchain(), transcript,
                                                chunk_size, chunk_overlap, key)
             except:
                 logger.error(f"Failed to generate the summary and keywords for video: {key}")
-                missed_video_id = open('missed_video_id.txt', 'a')
+                missed_video_id = open('cncf-youtube-channel-summarizer/data/missed_video_id.txt', 'a')
                 missed_video_id.write(key)
                 continue
 
@@ -95,7 +90,7 @@ class TranscriptSummarizer():
                     'conference_name': [self.videos_dict[key]['play_list']['title']], 'summary': [summary],
                     'keywords': [keywords]}
             df = pd.DataFrame(data)
-            df.to_csv('cncf_video_summary.csv', mode='a', index=False, header=False)
+            df.to_csv('cncf-youtube-channel-summarizer/data/cncf_video_summary.csv', mode='a', index=False, header=False)
 
 if __name__ == "__main__":
     model_id = "ibm-mistralai/mixtral-8x7b-instruct-v01-q"
@@ -109,5 +104,5 @@ if __name__ == "__main__":
                      'MAX_NEW_TOKENS': 128,
                      'TOP_K': 10,
                      }
-    transcript_path = 'CNCF_video_information.json'
+    transcript_path = 'cncf-youtube-channel-summarizer/data/CNCF_video_information.json'
     summarizer = TranscriptSummarizer(model_id, summary_param, keywords_param, transcript_path).run()
