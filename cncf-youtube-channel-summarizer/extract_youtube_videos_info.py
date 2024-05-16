@@ -54,7 +54,7 @@ def get_video_caption(video_id):
         raw_captions = YouTubeTranscriptApi.get_transcript(video_id)
     except:
         print(f"{video_id} doesn't have a transcript")
-        raw_captions = f"{video_id} doesn't have a transcript"
+        return f"{video_id} doesn't have a transcript"
     captions = ''
     for sentences in raw_captions:
         captions += sentences['text'] + ' '
