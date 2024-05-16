@@ -3,6 +3,7 @@ from youtube_transcript_api import YouTubeTranscriptApi
 import json
 from tqdm import tqdm
 import os
+
 def get_channel_playlist(youtube, channel_id):
     request = youtube.playlists().list(
         part = "snippet",
@@ -49,7 +50,11 @@ def get_video_id(youtube, playlist_id):
 
 def get_video_caption(video_id):
     # List the available captions for the video
-    raw_captions = YouTubeTranscriptApi.get_transcript(video_id)
+    try:
+        raw_captions = YouTubeTranscriptApi.get_transcript(video_id)
+    except:
+        print(f"{video_id} doesn't have a transcript")
+        raw_captions = f"{video_id} doesn't have a transcript"
     captions = ''
     for sentences in raw_captions:
         captions += sentences['text'] + ' '
@@ -59,16 +64,17 @@ def get_video_info(youtube, CHANNEL_ID):
     play_lists_dict = dict()
     videos_dict = {}
     playlists, playlists_id, playlists_title, playlists_desc = get_channel_playlist(youtube, CHANNEL_ID)
-    for i in range(0, len(playlists_id)):
+    for i in tqdm(range(0, len(playlists_id))):
         play_lists_dict[playlists_id[i]] = {'title': playlists_title[i], 'description': playlists_desc[i],
                                             'playlists_id': playlists_id[i]}
         video_ids, video_titles, video_desc = get_video_id(youtube, playlists_id[i])
-        for x in tqdm(range(0, len(video_ids))):
+        for x in range(0, len(video_ids)):
             caption = get_video_caption(video_ids[x])
 
             videos_dict[video_ids[x]] = {'video_title': video_titles[x], 'video_description': video_desc[x],
                                          'transcript': caption, 'play_list': play_lists_dict[playlists_id[i]]}
-    with open("CNCF_video_information.json", "w") as outfile:
+
+    with open("cncf-youtube-channel-summarizer/data/CNCF_video_information.json", "w") as outfile:
         json.dump(videos_dict, outfile)
 
 if __name__ == "__main__":
