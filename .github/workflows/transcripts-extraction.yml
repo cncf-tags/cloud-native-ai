@@ -1,0 +1,37 @@
+name: Run transcripts-extraction Pipline
+env:
+    GOOGLE_API_KEY: ${{secrets.GOOGLE_API_KEY}}
+
+on:
+  workflow_dispatch:
+
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'  # Specify the Python version you need
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r cncf-youtube-channel-summarizer/requirements.txt
+
+    - name: Extract YouTube Video Information.
+      run: | 
+           python cncf-youtube-channel-summarizer/extract_youtube_videos_info.py  
+
+    - name: Commit Change for "CNCF_video_information.json"
+      run: |
+          git config --global user.name 'Yuhao Chen'
+          git config --global user.email 'yuhao.chenyh@gmail.com'
+          git add cncf-youtube-channel-summarizer/data/CNCF_video_information.json || exit 0
+          git commit -m "Add Video Information" --signoff || exit 0
+          git push

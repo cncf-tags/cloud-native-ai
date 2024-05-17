@@ -1,0 +1,7 @@
+google_api_python_client==2.126.0
+ibm_watson_machine_learning==1.0.333
+langchain==0.1.20
+pandas==1.5.3
+tenacity==8.2.3
+tqdm==4.64.0
+youtube_transcript_api==0.6.2
