@@ -29,6 +29,12 @@ jobs:
       run: | 
            python cncf-youtube-channel-summarizer/transcript_summarizer.py  
 
+    - name: Upload transcript
+      uses: actions/upload-artifact@v4
+      with:
+        name: CNCF_video_information.json
+        path: cncf-youtube-channel-summarizer/data/cncf_video_summary.json
+
     - name: Commit Change for "cncf_video_summary.csv"
       run: |
           git config --global user.name 'Yuhao Chen'
@@ -36,6 +42,8 @@ jobs:
           git add cncf-youtube-channel-summarizer/data/cncf_video_summary.csv || exit 0
           git commit -m "Add Summaries and Keywords" --signoff || exit 0
           git push
+      env:
+        GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
     - name: Commit Change for "missed_video_id.txt"
       run: |
@@ -44,3 +52,6 @@ jobs:
           git add cncf-youtube-channel-summarizer/data/missed_video_id.txt || exit 0
           git commit -m "Add missed_video_id" --signoff || exit 0
           git push
+      env:
+        GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+      
