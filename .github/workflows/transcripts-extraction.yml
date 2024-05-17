@@ -5,6 +5,11 @@ env:
 on:
   workflow_dispatch:
 
+permissions:
+  pull-requests: write
+  contents: write
+  repository-projects: write
+  packages: write
 
 jobs:
   run-script:
@@ -28,10 +33,18 @@ jobs:
       run: | 
            python cncf-youtube-channel-summarizer/extract_youtube_videos_info.py  
 
+    - name: Upload transcript
+      uses: actions/upload-artifact@v4
+      with:
+        name: CNCF_video_information.json
+        path: cncf-youtube-channel-summarizer/data/CNCF_video_information.json
+
     - name: Commit Change for "CNCF_video_information.json"
       run: |
-          git config --global user.name 'Yuhao Chen'
-          git config --global user.email 'yuhao.chenyh@gmail.com'
+          git config --global user.email "dependabot[bot]@users.noreply.github.com" 
+          git config --global user.name "dependabot[bot]"
           git add cncf-youtube-channel-summarizer/data/CNCF_video_information.json || exit 0
           git commit -m "Add Video Information" --signoff || exit 0
           git push
+      env:
+        GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
