@@ -6,6 +6,11 @@ env:
 on:
   workflow_dispatch:
 
+permissions:
+  pull-requests: write
+  contents: write
+  repository-projects: write
+  packages: write
 
 jobs:
   run-script:
