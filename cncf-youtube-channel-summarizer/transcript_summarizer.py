@@ -80,11 +80,13 @@ class TranscriptSummarizer():
             try:
                 summary, keywords = self.LLM_summarizer(self.llm_summary.to_langchain(), self.llm_keywords.to_langchain(), transcript,
                                                chunk_size, chunk_overlap, key)
-            except:
+            except Exception as e:
                 logger.error(f"Failed to generate the summary and keywords for video: {key}")
+                logger.error(f"{e}")
                 missed_video_id = open('cncf-youtube-channel-summarizer/data/missed_video_id.txt', 'a')
-                missed_video_id.write(key)
-                continue
+                missed_video_id.write(key+',')
+                #continue
+                break
 
             data = {'video_id': [key], 'video_title': [self.videos_dict[key]['video_title']],
                     'conference_name': [self.videos_dict[key]['play_list']['title']], 'summary': [summary],
