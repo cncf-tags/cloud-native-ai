@@ -6,6 +6,11 @@ env:
 on:
   workflow_dispatch:
 
+permissions:
+  pull-requests: write
+  contents: write
+  repository-projects: write
+  packages: write
 
 jobs:
   run-script:
@@ -37,8 +42,8 @@ jobs:
 
     - name: Commit Change for "cncf_video_summary.csv"
       run: |
-          git config --global user.name 'Yuhao Chen'
-          git config --global user.email 'yuhao.chenyh@gmail.com'
+          git config --global user.email "dependabot[bot]@users.noreply.github.com" 
+          git config --global user.name "dependabot[bot]"
           git add cncf-youtube-channel-summarizer/data/cncf_video_summary.csv || exit 0
           git commit -m "Add Summaries and Keywords" --signoff || exit 0
           git push
@@ -47,8 +52,8 @@ jobs:
 
     - name: Commit Change for "missed_video_id.txt"
       run: |
-          git config --global user.name 'Yuhao Chen'
-          git config --global user.email 'yuhao.chenyh@gmail.com'
+          git config --global user.email "dependabot[bot]@users.noreply.github.com" 
+          git config --global user.name "dependabot[bot]"
           git add cncf-youtube-channel-summarizer/data/missed_video_id.txt || exit 0
           git commit -m "Add missed_video_id" --signoff || exit 0
           git push
