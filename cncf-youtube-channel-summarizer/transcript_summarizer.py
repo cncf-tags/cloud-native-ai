@@ -47,12 +47,21 @@ class TranscriptSummarizer():
     def LLM_summarizer(self, llm_summary, llm_keywords, transcript, chunk_size, chunk_overlap, key):
         text_splitter = RecursiveCharacterTextSplitter(chunk_size=chunk_size, chunk_overlap=chunk_overlap)
         texts = text_splitter.create_documents([transcript])
+<<<<<<< HEAD
         map_summary_template = open('cncf-youtube-channel-summarizer/prompt/chunks_summary_prompt.txt').readlines()
         map_summary_template = ''.join(map_summary_template)
         combine_summary_template = open('cncf-youtube-channel-summarizer/prompt/combine_summary_prompt.txt').readlines()
         combine_summary_template = ''.join(combine_summary_template)
 
         keyword_template = open('cncf-youtube-channel-summarizer/prompt/keyword_template.txt').readlines()
+=======
+        map_summary_template = open('prompt/chunks_summary_prompt.txt').readlines()
+        map_summary_template = ''.join(map_summary_template)
+        combine_summary_template = open('prompt/combine_summary_prompt.txt').readlines()
+        combine_summary_template = ''.join(combine_summary_template)
+
+        keyword_template = open('prompt/keyword_template.txt').readlines()
+>>>>>>> 83e025d (Adding routes)
         keyword_template = ''.join(keyword_template)
 
         map_prompt = PromptTemplate(template=map_summary_template, input_variables=["text"])
@@ -80,11 +89,18 @@ class TranscriptSummarizer():
             try:
                 summary, keywords = self.LLM_summarizer(self.llm_summary.to_langchain(), self.llm_keywords.to_langchain(), transcript,
                                                chunk_size, chunk_overlap, key)
+<<<<<<< HEAD
             except Exception as e:
                 logger.error(f"Failed to generate the summary and keywords for video: {key}")
                 logger.error(f"{e}")
                 missed_video_id = open('cncf-youtube-channel-summarizer/data/missed_video_id.txt', 'a')
                 missed_video_id.write(key+',')
+=======
+            except:
+                logger.error(f"Failed to generate the summary and keywords for video: {key}")
+                missed_video_id = open('cncf-youtube-channel-summarizer/data/missed_video_id.txt', 'a')
+                missed_video_id.write(key)
+>>>>>>> 83e025d (Adding routes)
                 continue
 
             data = {'video_id': [key], 'video_title': [self.videos_dict[key]['video_title']],
