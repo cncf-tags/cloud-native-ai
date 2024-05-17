@@ -14,15 +14,15 @@ const ForceGraph = ({ data }) => {
     // Extract nodes and links from the parsed data
     const header = parsedData[0];
     const rows = parsedData.slice(1); // Exclude the header row
-    const keywordsIndex = header.indexOf('Keywords');
+    const keywordsIndex = header.indexOf('keywords');
     const nodesSet = new Set();
     const links = [];
     
     rows.forEach(row => {
-      const keywords = row[keywordsIndex].split(', ');
+      const keywords = row[keywordsIndex].split('- ');
       keywords.forEach(keyword => nodesSet.add(keyword));
-      for (let i = 0; i < keywords.length; i++) {
-        for (let j = i + 1; j < keywords.length; j++) {
+      for (let i = 0; i < Math.min(keywords.length, 5); i++) {
+        for (let j = i + 1; j < Math.min(keywords.length, 5); j++) {
           links.push({ source: keywords[i], target: keywords[j] });
         }
       }
