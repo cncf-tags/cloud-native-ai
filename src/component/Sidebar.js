@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Papa from 'papaparse';// Make sure to install papaparse with command 'npm install papaparse'
+import Papa from 'papaparse';
 import { useRouter } from 'next/router';
 
 const Sidebar = () => {
@@ -28,7 +28,6 @@ const Sidebar = () => {
 
   // Function to fetch conference data from CSV file
   const fetchConferences = () => {
-    // Replace the URL with the correct path to your CSV file
     fetch('https://raw.githubusercontent.com/cncf-tags/cloud-native-ai/main/cncf-youtube-channel-summarizer/data/sample_cncf_video_summary.csv')
       .then((response) => {
         if (!response.ok) {
