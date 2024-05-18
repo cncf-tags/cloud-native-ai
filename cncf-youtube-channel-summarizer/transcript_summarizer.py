@@ -85,8 +85,7 @@ class TranscriptSummarizer():
                 logger.error(f"{e}")
                 missed_video_id = open('cncf-youtube-channel-summarizer/data/missed_video_id.txt', 'a')
                 missed_video_id.write(key+',')
-                #continue
-                break
+                continue
 
             data = {'video_id': [key], 'video_title': [self.videos_dict[key]['video_title']],
                     'conference_name': [self.videos_dict[key]['play_list']['title']], 'summary': [summary],
