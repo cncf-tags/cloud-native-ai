@@ -1,5 +1,3 @@
-import Sidebar from './Sidebar'
-import Navbar from './Navbar'
 import { useEffect, useState } from 'react';
 import ForceGraph from './force-graph';
 const Home = () => {
@@ -12,10 +10,8 @@ const Home = () => {
   }, []);
 
   return (
-    <div style={{ backgroundColor: '#F0F8FF' }}> {/* Changed background color to light gray */}
-      <Sidebar />
+    <div style={{ backgroundColor: '#F0F8FF' }}>
       <main className="flex-grow ml-64 relative">
-        <Navbar />
         {data && <ForceGraph data={data} src="/conference-dashboard"/>}
       </main>
     </div>
