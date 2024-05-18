@@ -1,3 +1,0 @@
-Given the following video transcript delimited by triple backquotes, please analyze the content and extract the top 5 keywords in bullet points that best represent the main themes and topics discussed.
-```{text}```
-BULLET POINT Keywords:
