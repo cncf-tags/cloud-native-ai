@@ -6,15 +6,16 @@ import json
 from langchain import PromptTemplate
 import pandas as pd
 import sys
+import os
 from tenacity import retry, stop_after_attempt, wait_fixed
 from logger import setup_logger
 
 logger = setup_logger("TranscriptSummarizer")
 class TranscriptSummarizer():
     def __init__(self, model_id, summary_param, keywords_param, transcript_path):
-        self.APIKEY = '5Mfps26in8KtCtyuqXsvA6kPaFnYqtlJGme82S7YlKKK'
-        self.project_id = '4567647a-9906-40e0-a697-388547633814'
-        self.url = "https://us-south.ml.cloud.ibm.com"
+        self.APIKEY = os.environ['WATSONX_KEY']
+        self.project_id = os.environ['WATSONX_PROJECT_ID']
+        self.url = os.environ['WATSONX_URL']
         self.model_id = model_id
         self.summary_param = summary_param
         self.keywords_param = keywords_param
@@ -48,12 +49,12 @@ class TranscriptSummarizer():
     def LLM_summarizer(self, llm_summary, llm_keywords, transcript, chunk_size, chunk_overlap, key):
         text_splitter = RecursiveCharacterTextSplitter(chunk_size=chunk_size, chunk_overlap=chunk_overlap)
         texts = text_splitter.create_documents([transcript])
-        map_summary_template = open('prompt/chunks_summary_prompt.txt').readlines()
+        map_summary_template = open('cncf-youtube-channel-summarizer/prompt/chunks_summary_prompt.txt').readlines()
         map_summary_template = ''.join(map_summary_template)
-        combine_summary_template = open('prompt/combine_summary_prompt.txt').readlines()
+        combine_summary_template = open('cncf-youtube-channel-summarizer/prompt/combine_summary_prompt.txt').readlines()
         combine_summary_template = ''.join(combine_summary_template)
 
-        keyword_template = open('prompt/keyword_template.txt').readlines()
+        keyword_template = open('cncf-youtube-channel-summarizer/prompt/keyword_template.txt').readlines()
         keyword_template = ''.join(keyword_template)
 
         map_prompt = PromptTemplate(template=map_summary_template, input_variables=["text"])
@@ -73,7 +74,6 @@ class TranscriptSummarizer():
         max_sequence_length = self.llm_summary.get_details()['model_limits']['max_sequence_length']
         chunk_size = max_sequence_length - 1000
         chunk_overlap = 50
-        logger.info(f"{len(self.videos_dict)}")
         self.videos_dict = self.videos_dict[start_index:end_index+1]
         for i in range(0, len(self.videos_dict)):
             key = list(self.videos_dict[i].keys())[0]
@@ -113,7 +113,6 @@ if __name__ == "__main__":
     args = sys.argv
     start_index = int(args[1])
     end_index = int(args[2])
-    print(start_index, end_index)
     model_id = "ibm-mistralai/mixtral-8x7b-instruct-v01-q"
     summary_param = {
                     'TEMPERATURE':0.7,

@@ -1,1 +1,58 @@
 video_id,video_title,summary,keywords
+RQWFwZBfGv8,Terrible Ideas in Kubernetes,KCD Los Angeles 2024,"
+
+The speaker presented on Kubernetes, a complex system for managing containerized applications. The speaker highlighted Kubernetes' ability to solve problems related to application scheduling and separation from underlying hardware, while also noting its additional complexity and cost. The speaker compared Kubernetes to an F35 aircraft, highlighting its complexity and expense, but not always reliability. Despite these challenges, the speaker noted that Kubernetes has become a popular tool for devops professionals due to the operational experience and transferable skills it provides.
+
+The speaker also mentioned that Kubernetes is not the only tool available for managing containerized applications, and suggested that the choice of tool depends on the specific needs and resources of the organization, as well as the skills and experience of the team.
+
+The speaker emphasized the importance of namespaces in Kubernetes for organizing and managing resources within the system, and noted that careful planning and testing are necessary to ensure that Kubernetes is deployed and managed effectively. The speaker also highlighted the strong demand for operational experience with Kubernetes in the industry, and suggested that organizations should consider the specific needs and constraints of their applications and workloads when selecting and configuring Kubernetes tools and components.","
+- Kubernetes
+- Containerized applications
+- Devops professionals
+- Namespaces
+- Operational experience"
+TT3POS35dDw,Vending Machine for Accelerating Data Science Experiments,KCD Los Angeles 2024,"
+
+In this video, Christina Andonov and Aura Kar from Amazon Web Services (AWS) discuss the challenges of using Kubernetes for machine learning (ML) workloads and how to build a platform on Kubernetes for ML workloads using AWS tools and open-source projects. They introduce Carpenter, an AWS open-source project for managing instances in Kubernetes clusters, and Ray, an open-source framework for running distributed applications. The speakers demonstrate how to create a data science platform on Kubernetes using Carpenter, Ray, and other AWS tools, such as S3 Mount Points and AWS Controllers for Kubernetes (ACK). They conclude by answering questions from the audience about the biggest challenges they've faced in building this platform, which include managing instance provisioning and scaling for ML workloads.
+
+The main technologies discussed in this video include:
+- Kubernetes: an open-source platform for automating deployment, scaling, and management of containerized applications.
+- Carpenter: an AWS open-source project for managing instances in Kubernetes clusters.
+- Ray: an open-source framework for running distributed applications.
+- S3 Mount Points: a tool for mounting Amazon S3 buckets as filesystems in Kubernetes.
+- AWS Controllers for Kubernetes (ACK): a set of Kubernetes controllers for managing AWS resources.
+
+The key takeaway from this video is that building a platform on Kubernetes for ML workloads requires addressing the unique resource requirements of ML workloads, such as the need for GPUs, and managing instance provisioning and scaling. The speakers demonstrate how to use Carpenter, Ray, and other AWS tools to create a data science platform on Kubernetes that meets these requirements.
+
+Future trends in this area may include further development of tools and frameworks for managing ML workloads on Kubernetes, as well as increased adoption of Kubernetes for ML workloads in general. As ML workloads become more complex and resource-intensive, platforms like the one demonstrated in this video will become increasingly important for managing these workloads effectively.","
+- Kubernetes
+- Carpenter
+- Ray
+- AWS Controllers for Kubernetes (ACK)
+- Machine Learning (ML) workloads"
+btpq6brm13g,"Back to basics, getting traffic into your Kubernetes cluster",KCD Los Angeles 2024,"
+
+In this talk, Nicola Frankl, a developer advocate, presented a concise introduction to Kubernetes, focusing on its fundamental concepts and offering practical demonstrations on setting up a cluster and managing services, IPs, routing, and load balancing. Key technologies mentioned include Kind, Docker, kubernetes, Metal LB, and the Getaway API.
+
+The main topics discussed were:
+- Kubernetes basics: clusters, pods, and services
+- Ephemeral nature of pod IPs and the introduction of services for stable IPs
+- Load balancer service for load balancing and stable IPs, but with internal IPs
+- Metal LB as a load balancer for stable IPs accessible from outside the cluster
+- Ingress object for routing capabilities
+- Ingress implementations and the Getaway API for wider abstraction and addressing Ingress issues
+
+Significant conclusions and future trends highlighted by the speakers:
+- The Getaway API is a new specification, and not all implementations are at the same level
+- The presented concepts and tools are practical solutions for managing clusters and services in a Kubernetes environment.","
+- Kubernetes
+- Clusters
+- Pods
+- Services
+- IPs
+- Load balancing
+- Metal LB
+- Ingress object
+- Getaway API
+- Specification
+- Implementations"
