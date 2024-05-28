@@ -1,0 +1,45 @@
+BoNrIx93vZE,Create a First AI Program with TypeScript and Serverless WebAssembly,KCD Los Angeles 2024,"
+The speakers in this presentation discuss the development of a JSON API that returns a Magic 8 Ball response using a random number generator to generate answers. They also discuss augmenting this code with AI and creating a front-end for it. The speakers also mention using a key-value store to cache the values. They demonstrate generating a random number and mapping it to a string using a switch statement. The speakers experience technical difficulties and try multiple times to test the API with different questions, but encounter errors. They also mention using cosine similarity to search for text based on a generated vector and comparing it to the original text.
+
+KEY TECHNOLOGIES:
+- JSON API
+- AI
+- Key-value store
+- Random number generator
+- Cosine similarity
+
+MAIN TOPICS:
+- Developing a JSON API for a Magic 8 Ball
+- Augmenting the code with AI
+- Using a key-value store to cache values
+- Generating random numbers and mapping them to string answers
+- Using cosine similarity to search for text based on a generated vector
+
+CRITICAL QUESTIONS/ANSWERS:
+- What is the purpose of augmenting the code with AI? The purpose of augmenting the code with AI is not explicitly stated in the transcripts.
+- What is the issue with testing the API? The speakers encounter errors when testing the API with different questions, but the specific issue is not addressed in the transcripts.
+- What is the purpose of using cosine similarity to search for text based on a generated vector? The purpose of using cosine similarity to search for text based on a generated vector is not explicitly stated in the transcripts.","
+- JSON API
+- AI
+- Key-value store
+- Random number generator
+- Cosine similarity"
+3sgPJJTstoA,"Stop using kubectl, and use Git instead! - Hands-on GitOps workshop using Argo CD and Helm",KCD Los Angeles 2024,"
+
+The main topic discussed in this video is the use of AI and machine learning in application development, specifically in debugging and triaging issues in Kubernetes. The speakers introduce the concept of using publicly available data for AI-based debugging and triaging, highlighting the use of an AI assistant that developers can utilize to help them with these tasks. They also delve into Argo CD and its application set, which includes various generators, such as list, cluster, secret, and pull request generators, used for building Argo CD applications.
+
+Key technologies mentioned in this video include Kubernetes, Argo CD, and AI assistants for debugging and triaging. Argo CD is a declarative, GitOps continuous delivery tool for Kubernetes, while AI assistants help developers debug and triage issues in their applications.
+
+Significant conclusions or future trends highlighted by the speakers include the potential of using AI and machine learning to assist developers in debugging and triaging issues in Kubernetes. The speakers also emphasize the importance of testing and debugging before merging pull requests, which can help prevent issues from arising in production environments.
+
+Critical questions or answers that stand out in this video include the use of AI and machine learning to assist developers in debugging and triaging issues in Kubernetes, and the potential benefits of using AI assistants for these tasks. Additionally, the speakers highlight the importance of testing and debugging before merging pull requests, which can help prevent issues from arising in production environments.","
+- AI
+- Machine Learning
+- Kubernetes
+- Argo CD
+- Debugging
+- Troubleshooting
+- GitOps
+- AI Assistants
+- Testing
+- Pull Requests"
