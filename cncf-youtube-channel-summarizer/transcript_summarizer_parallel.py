@@ -93,8 +93,9 @@ class TranscriptSummarizer():
                     'conference_name': [self.videos_dict[i][key]['play_list']['title']], 'summary': [summary],
                     'keywords': [keywords]}
             df = pd.DataFrame(data)
+            cols = ['video_id', 'video_title','conference_name', 'summary', 'keywords']
             output_path = 'cncf-youtube-channel-summarizer/data/cncf_video_summary_' + str(start_index) + '.csv'
-            df.to_csv(output_path, mode='a', index=False, header=False)
+            df.to_csv(output_path, columns=cols, mode='a', index=False, header=False)
 
 def dict_to_list_of_dicts(dictionary):
     # Initialize an empty list for the list of dictionaries
