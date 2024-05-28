@@ -54,7 +54,7 @@ class TranscriptSummarizer():
         combine_summary_template = open('cncf-youtube-channel-summarizer/prompt/combine_summary_prompt.txt').readlines()
         combine_summary_template = ''.join(combine_summary_template)
 
-        keyword_template = open('prompt/keyword_template.txt').readlines()
+        keyword_template = open('cncf-youtube-channel-summarizer/prompt/keyword_template.txt').readlines()
         keyword_template = ''.join(keyword_template)
 
         map_prompt = PromptTemplate(template=map_summary_template, input_variables=["text"])
