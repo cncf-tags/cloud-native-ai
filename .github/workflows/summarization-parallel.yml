@@ -44,13 +44,13 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
           name: cncf_video_summary_${{ matrix.index }}_${{ matrix.index_plus_one }}.csv
-          path: cncf-youtube-channel-summarizer/data/cncf_video_summary.csv
+          path: cncf-youtube-channel-summarizer/data/cncf_video_summary_${{ matrix.index}}.csv
 
     - name: Upload missed_video_id 
       uses: actions/upload-artifact@v4
       with:
           name: missed_video_id_${{ matrix.index }}_${{ matrix.index_plus_one }}.txt
-          path: cncf-youtube-channel-summarizer/data/missed_video_id.txt
+          path: cncf-youtube-channel-summarizer/data/missed_video_id_${{ matrix.index}}.txt
 
     - name: Commit Change for "cncf_video_summary.csv"
       run: |
