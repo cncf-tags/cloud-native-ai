@@ -74,6 +74,10 @@ class TranscriptSummarizer():
         max_sequence_length = self.llm_summary.get_details()['model_limits']['max_sequence_length']
         chunk_size = max_sequence_length - 1000
         chunk_overlap = 50
+        cncf_video_summary = pd.DataFrame(columns=['video_id', 'video_title','conference_name', 'summary', 'keywords'])
+        output_path = 'cncf-youtube-channel-summarizer/data/cncf_video_summary_' + str(start_index) + '.csv'
+        cncf_video_summary.to_csv(output_path, index=False)
+
         self.videos_dict = self.videos_dict[start_index:end_index+1]
         for i in range(0, len(self.videos_dict)):
             key = list(self.videos_dict[i].keys())[0]
@@ -94,9 +98,7 @@ class TranscriptSummarizer():
                     'conference_name': [self.videos_dict[i][key]['play_list']['title']], 'summary': [summary],
                     'keywords': [keywords]}
             df = pd.DataFrame(data)
-            cols = ['video_id', 'video_title','conference_name', 'summary', 'keywords']
-            output_path = 'cncf-youtube-channel-summarizer/data/cncf_video_summary_' + str(start_index) + '.csv'
-            df.to_csv(output_path, columns=cols, mode='a', index=False, header=False)
+            df.to_csv(output_path, mode='a', index=False, header=False)
 
 def dict_to_list_of_dicts(dictionary):
     # Initialize an empty list for the list of dictionaries
