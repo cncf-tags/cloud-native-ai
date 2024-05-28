@@ -6,6 +6,7 @@ import json
 from langchain import PromptTemplate
 import pandas as pd
 import sys
+import os
 from tenacity import retry, stop_after_attempt, wait_fixed
 from logger import setup_logger
 
