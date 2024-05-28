@@ -49,9 +49,9 @@ class TranscriptSummarizer():
     def LLM_summarizer(self, llm_summary, llm_keywords, transcript, chunk_size, chunk_overlap, key):
         text_splitter = RecursiveCharacterTextSplitter(chunk_size=chunk_size, chunk_overlap=chunk_overlap)
         texts = text_splitter.create_documents([transcript])
-        map_summary_template = open('cncf-youtube-channel-summarizer/data/prompt/chunks_summary_prompt.txt').readlines()
+        map_summary_template = open('cncf-youtube-channel-summarizer/prompt/chunks_summary_prompt.txt').readlines()
         map_summary_template = ''.join(map_summary_template)
-        combine_summary_template = open('cncf-youtube-channel-summarizer/data/prompt/combine_summary_prompt.txt').readlines()
+        combine_summary_template = open('cncf-youtube-channel-summarizer/prompt/combine_summary_prompt.txt').readlines()
         combine_summary_template = ''.join(combine_summary_template)
 
         keyword_template = open('prompt/keyword_template.txt').readlines()
@@ -74,7 +74,6 @@ class TranscriptSummarizer():
         max_sequence_length = self.llm_summary.get_details()['model_limits']['max_sequence_length']
         chunk_size = max_sequence_length - 1000
         chunk_overlap = 50
-        logger.info(f"{len(self.videos_dict)}")
         self.videos_dict = self.videos_dict[start_index:end_index+1]
         for i in range(0, len(self.videos_dict)):
             key = list(self.videos_dict[i].keys())[0]
@@ -113,7 +112,6 @@ if __name__ == "__main__":
     args = sys.argv
     start_index = int(args[1])
     end_index = int(args[2])
-    print(start_index, end_index)
     model_id = "ibm-mistralai/mixtral-8x7b-instruct-v01-q"
     summary_param = {
                     'TEMPERATURE':0.7,
