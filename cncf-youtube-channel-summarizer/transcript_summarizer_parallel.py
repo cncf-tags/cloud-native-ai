@@ -12,9 +12,9 @@ from logger import setup_logger
 logger = setup_logger("TranscriptSummarizer")
 class TranscriptSummarizer():
     def __init__(self, model_id, summary_param, keywords_param, transcript_path):
-        self.APIKEY = '5Mfps26in8KtCtyuqXsvA6kPaFnYqtlJGme82S7YlKKK'
-        self.project_id = '4567647a-9906-40e0-a697-388547633814'
-        self.url = "https://us-south.ml.cloud.ibm.com"
+        self.APIKEY = os.environ['WATSONX_KEY']
+        self.project_id = os.environ['WATSONX_PROJECT_ID']
+        self.url = os.environ['WATSONX_URL']
         self.model_id = model_id
         self.summary_param = summary_param
         self.keywords_param = keywords_param
