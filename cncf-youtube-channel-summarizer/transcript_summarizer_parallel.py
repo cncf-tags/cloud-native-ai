@@ -49,9 +49,9 @@ class TranscriptSummarizer():
     def LLM_summarizer(self, llm_summary, llm_keywords, transcript, chunk_size, chunk_overlap, key):
         text_splitter = RecursiveCharacterTextSplitter(chunk_size=chunk_size, chunk_overlap=chunk_overlap)
         texts = text_splitter.create_documents([transcript])
-        map_summary_template = open('prompt/chunks_summary_prompt.txt').readlines()
+        map_summary_template = open('cncf-youtube-channel-summarizer/data/prompt/chunks_summary_prompt.txt').readlines()
         map_summary_template = ''.join(map_summary_template)
-        combine_summary_template = open('prompt/combine_summary_prompt.txt').readlines()
+        combine_summary_template = open('cncf-youtube-channel-summarizer/data/prompt/combine_summary_prompt.txt').readlines()
         combine_summary_template = ''.join(combine_summary_template)
 
         keyword_template = open('prompt/keyword_template.txt').readlines()
