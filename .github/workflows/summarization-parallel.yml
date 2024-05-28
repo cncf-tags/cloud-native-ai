@@ -40,17 +40,23 @@ jobs:
           echo "Running script with arguments: $start, $end"
           python cncf-youtube-channel-summarizer/transcript_summarizer_parallel.py $start $end
 
-    - name: Upload transcript for iteration
+    - name: Upload Summaries
       uses: actions/upload-artifact@v4
       with:
           name: cncf_video_summary_${{ matrix.index }}_${{ matrix.index_plus_one }}.csv
-          path: cncf-youtube-channel-summarizer/data/cncf_video_summary.csv
+          path: cncf-youtube-channel-summarizer/data/cncf_video_summary_${{matrix.index}}.csv
+
+    - name: Upload missed_video_id 
+      uses: actions/upload-artifact@v4
+      with:
+          name: missed_video_id_${{ matrix.index }}_${{ matrix.index_plus_one }}.txt
+          path: cncf-youtube-channel-summarizer/data/missed_video_id_${{matrix.index}}.txt
 
     - name: Commit Change for "cncf_video_summary.csv"
       run: |
           git config --global user.name 'Yuhao Chen'
           git config --global user.email 'yuhao.chenyh@gmail.com'
-          git add cncf-youtube-channel-summarizer/data/cncf_video_summary.csv || exit 0
+          git add cncf-youtube-channel-summarizer/data/cncf_video_summary_${{matrix.index}}.csv || exit 0
           git commit -m "Add Summaries and Keywords" --signoff || exit 0
           git push
 
@@ -59,6 +65,6 @@ jobs:
       run: |
           git config --global user.name 'Yuhao Chen'
           git config --global user.email 'yuhao.chenyh@gmail.com'
-          git add cncf-youtube-channel-summarizer/data/missed_video_id.txt || exit 0
+          git add cncf-youtube-channel-summarizer/data/missed_video_id_${{matrix.index}}.txt || exit 0
           git commit -m "Add missed_video_id" --signoff || exit 0
           git push
