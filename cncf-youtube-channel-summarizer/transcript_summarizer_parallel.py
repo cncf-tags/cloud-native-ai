@@ -85,6 +85,7 @@ class TranscriptSummarizer():
             except Exception as e:
                 logger.error(f"Failed to generate the summary and keywords for video: {key}")
                 logger.error(f"{e}")
+                missed_video_id_path = 'cncf-youtube-channel-summarizer/data/missed_video_id_' + str(start_index) + '.txt'
                 missed_video_id = open('cncf-youtube-channel-summarizer/data/missed_video_id.txt', 'a')
                 missed_video_id.write(key+',')
                 continue
