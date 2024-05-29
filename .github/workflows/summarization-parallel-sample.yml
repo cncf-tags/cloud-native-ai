@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        index: [0, 9, 19, 29, 39]
+        index: [0, 2, 4]
 
 
     steps:
@@ -37,7 +37,7 @@ jobs:
     - name: Run script for iteration
       run: |
           start=${{ matrix.index }}
-          end=$((start + 9))
+          end=$((start + 1))
           echo "Running script with arguments: $start, $end"
           python cncf-youtube-channel-summarizer/transcript_summarizer_parallel.py $start $end
 
