@@ -1,0 +1,52 @@
+video_id,video_title,conference_name,summary,keywords
+BoNrIx93vZE,Create a First AI Program with TypeScript and Serverless WebAssembly,KCD Los Angeles 2024,"
+
+The speakers discuss building a JSON API using the Spin framework to create a Magic 8 Ball application. They demonstrate using Spin to create a new application with an HTTP server, handling an incoming request, and returning a random answer from a predefined list. The speakers highlight using the LLM2 chat model to generate responses and managing state using a key-value (KV) store. They also touch on deploying applications to the cloud and using the Spin Cloud GPU plugin for local development.
+
+Key technologies mentioned include:
+- Spin framework
+- JSON API
+- Magic 8 Ball application
+- LLM2 chat model
+- Key-value (KV) store
+- Remote compute
+- Spin Cloud GPU plugin
+
+Significant conclusions and future trends highlighted by the speakers include:
+- Differences in execution and error handling between local and cloud-based applications
+- Using a key-value store as a cache layer for responses
+- Importance of using the right runtime configurations for successful deployment to the cloud
+
+Critical questions and answers include:
+
+Q: How do we get the database and code for this workshop?
+A: All information, including markdown files, code, and the answers directory, is available on the workshop's GitHub repository at github.com/workshops/spin-workshops.","
+- Spin framework
+- JSON API
+- Magic 8 Ball application
+- LLM2 chat model
+- Key-value (KV) store"
+3sgPJJTstoA,"Stop using kubectl, and use Git instead! - Hands-on GitOps workshop using Argo CD and Helm",KCD Los Angeles 2024,"
+
+The speakers discuss Argo CD, a declarative, GitOps continuous delivery tool for Kubernetes. Argo CD ensures that your application runs as you have defined it in Git, and keeps it there through an automated workflow. The workshop focuses on using Argo CD to manage workloads in a GitOps way, demonstrating the use of Helm, git, and managing stateful workloads. Justin, a maintainer of Argo CD, is available to answer any questions during the workshop.
+
+The speakers also mention the use of a pre-built Dev container with GitHub codespaces, providing a consistent and managed development environment. They briefly encounter technical difficulties, but plan to resolve these in the next five minutes.
+
+Key technologies discussed:
+- Argo CD
+- Kubernetes
+- Helm
+- Git
+- GitHub codespaces
+
+Significant conclusions or future trends highlighted:
+- Using declarative configuration in Git for managing applications in Kubernetes
+- Automating continuous delivery with Argo CD
+- Leveraging Helm for packaging and deploying applications in Kubernetes
+- Utilizing Git for managing application state
+- Ensuring consistent development environments with Dev containers and GitHub codespaces.","
+- Argo CD
+- Kubernetes
+- Helm
+- Git
+- GitHub codespaces"

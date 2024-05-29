@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        index: [0, 9, 19, 29, 39]
+        index: [0, 2, 4]
 
 
     steps:
@@ -37,7 +37,7 @@ jobs:
     - name: Run script for iteration
       run: |
           start=${{ matrix.index }}
-          end=$((start + 9))
+          end=$((start + 1))
           echo "Running script with arguments: $start, $end"
           python cncf-youtube-channel-summarizer/transcript_summarizer_parallel.py $start $end
 
@@ -55,8 +55,8 @@ jobs:
 
     - name: Commit Change for "cncf_video_summary.csv"
       run: |
-          git config --global user.name 'Yuhao Chen'
-          git config --global user.email 'yuhao.chenyh@gmail.com'
+          git config --global user.email "dependabot[bot]@users.noreply.github.com" 
+          git config --global user.name "dependabot[bot]"
           git pull origin main
           git add cncf-youtube-channel-summarizer/data/cncf_video_summary_${{matrix.index}}.csv || exit 0
           git commit -m "Add Summaries and Keywords" --signoff || exit 0
@@ -65,9 +65,11 @@ jobs:
 
     - name: Commit Change for "missed_video_id.txt"
       run: |
-          git config --global user.name 'Yuhao Chen'
-          git config --global user.email 'yuhao.chenyh@gmail.com'
+          git config --global user.email "dependabot[bot]@users.noreply.github.com" 
+          git config --global user.name "dependabot[bot]"
           git pull origin main
           git add cncf-youtube-channel-summarizer/data/missed_video_id_${{matrix.index}}.txt || exit 0
           git commit -m "Add missed_video_id" --signoff || exit 0
           git push
+      env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
