@@ -71,5 +71,5 @@ jobs:
           git add cncf-youtube-channel-summarizer/data/missed_video_id_${{matrix.index}}.txt || exit 0
           git commit -m "Add missed_video_id" --signoff || exit 0
           git push
-     env:
-        GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+      env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
