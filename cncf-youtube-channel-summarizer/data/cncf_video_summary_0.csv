@@ -1,49 +1,52 @@
 video_id,video_title,conference_name,summary,keywords
 BoNrIx93vZE,Create a First AI Program with TypeScript and Serverless WebAssembly,KCD Los Angeles 2024,"
-In this workshop, the presenters demonstrate building a JSON API for a Magic 8 Ball application using the Spin SDK. They show how to use the all mini LM L6 V2 embeddings model to generate embeddings for facts and perform vector similarity searches to find the most relevant fact for a given user question. The presenters also discuss the possibility of using custom models in the future.
 
-KEY TECHNOLOGIES AND CONCEPTS:
-- Spin SDK
+The speakers discuss building a JSON API using the Spin framework to create a Magic 8 Ball application. They demonstrate using Spin to create a new application with an HTTP server, handling an incoming request, and returning a random answer from a predefined list. The speakers highlight using the LLM2 chat model to generate responses and managing state using a key-value (KV) store. They also touch on deploying applications to the cloud and using the Spin Cloud GPU plugin for local development.
+
+Key technologies mentioned include:
+- Spin framework
 - JSON API
 - Magic 8 Ball application
-- all mini LM L6 V2 embeddings model
-- Vector similarity search
-- Retrieval augmented generation (RAG)
-- SQLite database
-- Custom models
+- LLM2 chat model
+- Key-value (KV) store
+- Remote compute
+- Spin Cloud GPU plugin
 
-MAIN TOPICS DISCUSSED:
-- Building a JSON API for a Magic 8 Ball application using the Spin SDK
-- Using the all mini LM L6 V2 embeddings model to generate embeddings for facts
-- Performing vector similarity searches to find the most relevant fact for a given user question
-- Discussion on the possibility of using custom models in the future
+Significant conclusions and future trends highlighted by the speakers include:
+- Differences in execution and error handling between local and cloud-based applications
+- Using a key-value store as a cache layer for responses
+- Importance of using the right runtime configurations for successful deployment to the cloud
 
-CRITICAL QUESTIONS AND ANSWERS:
-Q: Are there any performance considerations when using the Spin SDK to create a JSON API for a Magic 8 Ball application?
-A: The presenters mention that there are ways to optimize performance further, but they do not provide specific details. They note that the time taken for the application to load, the model to load, the request to be made, the response to be generated, and the answer to be returned to the client is approximately 1.2 seconds.
+Critical questions and answers include:
 
-FUTURE TRENDS:
-- The presenters mention the possibility of using custom models in the future, which could allow for more tailored user experiences and applications.
-
-MISSING CONTENT:
-- The presenters do not provide specific details on how to optimize performance further.
-- The presenters do not provide any information on the specific implementation of the all mini LM L6 V2 embeddings model or the SQLite database used in the application.
-
-OVERALL, THE PRESENTATION AND DISCUSSION FOCUSED ON BUILDING A JSON API FOR A MAGIC 8 BALL APPLICATION USING THE SPIN SDK, WHICH ALLOWED FOR THE USE OF THE ALL","
-- Spin SDK
+Q: How do we get the database and code for this workshop?
+A: All information, including markdown files, code, and the answers directory, is available on the workshop's GitHub repository at github.com/workshops/spin-workshops.","
+- Spin framework
 - JSON API
 - Magic 8 Ball application
-- all mini LM L6 V2 embeddings model
-- Vector similarity search"
+- LLM2 chat model
+- Key-value (KV) store"
 3sgPJJTstoA,"Stop using kubectl, and use Git instead! - Hands-on GitOps workshop using Argo CD and Helm",KCD Los Angeles 2024,"
 
-The main topics discussed in this presentation are Kubernetes, Argo CD, and stateful workloads. The speakers address the challenges of managing stateful workloads with Argo CD and provide solutions for these challenges. Key technologies mentioned include Helm charts, Kubernetes resources, and Git repositories. The presentation also highlights the benefits of using Argo CD for managing stateful workloads, such as automatic synchronization and rollbacks.
+The speakers discuss Argo CD, a declarative, GitOps continuous delivery tool for Kubernetes. Argo CD ensures that your application runs as you have defined it in Git, and keeps it there through an automated workflow. The workshop focuses on using Argo CD to manage workloads in a GitOps way, demonstrating the use of Helm, git, and managing stateful workloads. Justin, a maintainer of Argo CD, is available to answer any questions during the workshop.
 
-The speakers also discuss the use of application Sets and generators to create new environments for testing new features before merging them into master. They provide a detailed explanation of how to use application Sets and generators to create a new environment and test it, and then merge it into master for production use.
+The speakers also mention the use of a pre-built Dev container with GitHub codespaces, providing a consistent and managed development environment. They briefly encounter technical difficulties, but plan to resolve these in the next five minutes.
 
-Overall, the presentation provides valuable insights into managing stateful workloads with Argo CD and using application Sets and generators to create new environments for testing and deploying new features.","
-- Kubernetes
+Key technologies discussed:
 - Argo CD
-- stateful workloads
-- Helm charts
-- Git repositories"
+- Kubernetes
+- Helm
+- Git
+- GitHub codespaces
+
+Significant conclusions or future trends highlighted:
+- Using declarative configuration in Git for managing applications in Kubernetes
+- Automating continuous delivery with Argo CD
+- Leveraging Helm for packaging and deploying applications in Kubernetes
+- Utilizing Git for managing application state
+- Ensuring consistent development environments with Dev containers and GitHub codespaces.","
+- Argo CD
+- Kubernetes
+- Helm
+- Git
+- GitHub codespaces"
