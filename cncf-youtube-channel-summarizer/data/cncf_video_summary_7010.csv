@@ -1,0 +1,8 @@
+video_id,video_title,conference_name,summary,keywords
+V53nSS2mnsM,"Introduction to CRI-O - Mrunal Patel, Red Hat, Inc. & Peter Hunt, Red Hat, Inc.",KubeCon + CloudNativeCon North America 2019 (San Diego),"
+This panel discussion at the MIT Sloan CIO Symposium 2019 explores the role of Artificial Intelligence (AI) and Machine Learning (ML) in cybersecurity, emphasizing human-AI collaboration rather than replacement. Key topics include addressing AI's limitations, ensuring data quality and combating bias, and addressing ethical considerations in AI use. The panelists highlight the importance of using AI to augment human capabilities, such as sifting through large datasets and identifying patterns, while also requiring human oversight for accuracy and ethical concerns. They also discuss the need for clear policies and guidelines around AI use in cybersecurity. Overall, the discussion highlights the potential of AI and ML in cybersecurity while acknowledging the need for continuous investment in research and development to address their limitations.","
+- Artificial Intelligence (AI)
+- Machine Learning (ML)
+- Cybersecurity
+- Human-AI collaboration
+- Ethical considerations"
