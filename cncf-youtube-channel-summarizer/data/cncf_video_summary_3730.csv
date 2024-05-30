@@ -1,0 +1,41 @@
+video_id,video_title,conference_name,summary,keywords
+CpTvql1u8qk,"Lightning Talk: Integrating 3rd Party, Non-prometheus-native Services without Writing... Paweł Krupa",PrometheusDay EU 2022,"
+Dr. John Halamka and Dr. David McCallie discuss the state and future of interoperability in healthcare. They explore the role of FHIR in enabling easier data exchange, the importance of standardized data formats, and the challenges in achieving true interoperability. They also highlight the need for a ""network effect,"" the impact of government and regulations, and the potential of blockchain technology to enhance interoperability. They emphasize the importance of addressing privacy concerns and ensuring patient consent for data sharing. Key conclusions include the need to address both technical and cultural challenges for true interoperability, the potential of FHIR and blockchain technology, and the importance of building trust with patients and addressing privacy concerns. Critical questions include overcoming challenges in data fragmentation and data silos, the role of government and regulations, and the potential of blockchain technology in healthcare data management.","
+- Interoperability in healthcare
+- FHIR (Fast Healthcare Interoperability Resources)
+- Standardized data formats
+- Network effect
+- Privacy concerns and patient consent"
+UHkX1BX7PJE,"Closing Remarks - Richard Hartmann, Community Director, Grafana Labs",PrometheusDay EU 2022,"
+
+The panel discussion focuses on the future of artificial intelligence (AI) in business, featuring experts from cloud computing, academia, and software development. Key topics include AI adoption in various industries, advancements in AI algorithms and models, and the challenges and risks associated with AI implementation.
+
+The panelists discuss the benefits of AI, such as improved efficiency and decision-making, as well as the importance of explainability and ethics in AI development. They also highlight the challenges of integrating AI into existing systems and processes and the need for diverse datasets, transparent processes, and continuous learning in the workforce.
+
+Potential risks and challenges associated with AI adoption include biases in AI models and algorithms, ethical implications such as privacy concerns and impact on jobs, and legal and reputational risks. The panelists predict future trends in AI, including increased use of AI in edge computing, the integration of AI with other emerging technologies, a shift towards more explainable and trustworthy AI, and the growing importance of AI for social impact. They also expect to see more focus on AI ethics, industry-specific AI solutions, and a more diverse and inclusive AI workforce.
+
+In summary, the panel discussion highlights the potential of AI to transform various industries, emphasizes the importance of responsible AI development and implementation, and underlines the need for a diverse and skilled AI workforce to address future challenges and trends.","
+- Artificial Intelligence (AI)
+- Business
+- Cloud Computing
+- Algorithms and Models
+- Ethics and Explainability
+- Challenges and Risks
+- Efficiency and Decision-making
+- Diverse Datasets
+- Transparent Processes
+- Continuous Learning
+- Biases in AI Models
+- Emerging Technologies
+- Explainable and Trustworthy AI
+- Social Impact
+- Industry-specific AI Solutions
+- Diverse and Inclusive AI Workforce"
+8Ox0M6HIE3w,"Lightning Talk: Pyrra - Making SLOs with Prometheus Manageable, Accessible, and Ea... Matthias Loibl",PrometheusDay EU 2022,"
+
+The video features a discussion on the future of data analytics and its impact on various industries. The speakers highlight the increasing importance of data-driven decision-making and the potential of data analytics to transform businesses. They discuss the emergence of AI and ML as key technologies driving the growth of data analytics, and the need for businesses to adopt these technologies to remain competitive. The speakers also touch on the challenges of implementing data analytics, including the need for skilled professionals, data governance, and potential biases in AI algorithms. They emphasize the importance of data privacy and security in the age of data analytics and AI. In conclusion, the speakers highlight the potential of data analytics, AI, and ML to create new opportunities for businesses and transform various industries.","
+- Data Analytics
+- Artificial Intelligence (AI)
+- Machine Learning (ML)
+- Data-driven decision-making
+- Data Privacy and Security"
