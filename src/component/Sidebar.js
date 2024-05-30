@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Papa from 'papaparse';// Make sure to install papaparse with command 'npm install papaparse'
+import Papa from 'papaparse';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 
@@ -28,10 +28,8 @@ const Sidebar = () => {
     }
   };
 
-  // Function to fetch conference data from CSV file
 // Function to fetch conference data from CSV file
 const fetchConferences = () => {
-  // Replace the URL with the correct path to your CSV file
   fetch('https://raw.githubusercontent.com/cncf-tags/cloud-native-ai/main/cncf-youtube-channel-summarizer/data/cncf_video_summary_29.csv')
     .then((response) => {
       if (!response.ok) {
@@ -66,7 +64,6 @@ const fetchConferences = () => {
 
   // Function to handle click on dropdown button
   const handleDropdownButtonClick = (name) => {
-    // Navigate to the new page when dropdown button is clicked
     setSelectedDropDownButton(name);
   };
 
