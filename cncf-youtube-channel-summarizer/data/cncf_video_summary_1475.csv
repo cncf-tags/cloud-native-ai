@@ -1,0 +1,45 @@
+video_id,video_title,conference_name,summary,keywords
+BU65CaPOmyc,Keynote: From Models to Market: What's the Missing Link in Scaling Open Source Models on... Fog Dong,KubeCon + CloudNativeCon + Open Source Summit China 2023,"
+
+Fog Dom's presentation focuses on the challenges of transitioning ML models to deployable applications on the cloud and introduces Benton Box, an open-source Python framework designed to streamline AI application development and deployment. Key technologies mentioned include Kubernetes, KEDA, Benton Box, and Open LLM. Fog Dom highlights the importance of addressing environment consistency, scalability, observability, and other issues when deploying AI applications. Open LLM, a case study in the presentation, packages language models as Bentos with SSE support and optimizations applied in the model runner layer. The talk concludes by discussing leveraging serverless for improved scalability and cost efficiency with KEDA and other tools.
+
+Critical questions and answers include:
+- What are the challenges of transitioning ML models to deployable applications on the cloud?
+  The presentation highlights the complexity of moving from ML code to a full-fledged application, which includes configuration, data collection, serving infrastructure, and more.
+
+- How does Benton Box address these challenges?
+  Benton Box divides the process into two main parts: build and deploy. The build phase focuses on challenges like model packaging, environment management, and model versioning, while the deployment phase tackles challenges like environment consistency, scalability, observability, and more.
+
+- What is Open LLM and how does it help productionize language models?
+  Open LLM is an open-source project that brings best practices to help users easily start popular language models with a single command. Open LLM pre-packages and pre-optimizes LLMs as artifacts, called Bentos, which include SSE support in the API server and optimizations applied in the model runner layer.
+
+- How does Leveraging the Power of serverless benefit AI application deployment?
+  Leveraging serverless tools like KEDA for improved scalability and cost efficiency can prevent GPU waste when models are idle and manage request queues and scale replicas up or down to zero.","
+- Benton Box
+- ML model deployment
+- Open LLM
+- Serverless
+- Kubernetes"
+XHW3pxXg_dc,In-Toto: Protecting Software Supply Chain in Cloud Native and Application in Confid... Justin Cappos,KubeCon + CloudNativeCon + Open Source Summit China 2023,"
+
+The video is a panel discussion at the AI for Good Global Summit 2019, focusing on the role of AI in achieving the United Nations' Sustainable Development Goals (SDGs). The panelists include representatives from various organizations working on AI applications for social good, including the XPRIZE Foundation, the United Nations, and the AI Impact Alliance. The main topics discussed include the potential of AI to help achieve the SDGs, the need for ethical and responsible AI, and the importance of collaboration between various stakeholders.
+
+Key technologies mentioned include AI, machine learning, and data analytics. The panelists also highlight the need for ethical and responsible AI, emphasizing the importance of transparency, accountability, and fairness. They also stress the need for collaboration between various stakeholders, including governments, private organizations, and civil society, to ensure that AI is developed and used in a way that benefits everyone.
+
+The panelists also discuss the challenges and limitations of using AI for social good, including the need for high-quality data, the risk of perpetuating existing biases, and the potential for unintended consequences. They also highlight the need for education and awareness-raising around AI, as well as the importance of involving local communities in the development and deployment of AI technologies.
+
+In terms of future trends, the panelists emphasize the need for continued investment in AI research and development, as well as the importance of creating policies and regulations that support responsible AI. They also highlight the potential of AI to help achieve the SDGs in areas such as healthcare, education, and environmental sustainability.
+
+CRITICAL QUESTIONS AND ANSWERS:
+
+One critical question that arises from the discussion is how to ensure that AI is developed and used in a way that benefits everyone, rather than just a few privileged individuals or organizations. The panelists emphasize the importance of collaboration between various stakeholders, as well as the need for ethical and responsible AI, but do not provide specific answers to this question.
+
+Another critical question is how to address the potential negative consequences of using AI, such as job displacement, privacy violations, and environmental degradation. The panelists acknowledge these concerns and highlight the need for education, awareness-raising, and regulation, but do not provide specific solutions to these challenges.
+
+In terms of future trends, one critical question is how to ensure that AI is developed and used in a","
+
+* Artificial Intelligence (AI)
+* Sustainable Development Goals (SDGs)
+* Ethical and responsible AI
+* Collaboration
+* Challenges and limitations of AI for social good"

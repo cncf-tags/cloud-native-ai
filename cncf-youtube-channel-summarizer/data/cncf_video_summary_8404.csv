@@ -1,0 +1,53 @@
+video_id,video_title,conference_name,summary,keywords
+lEe6kDR_dHg,"Deep Dive: Container Identity WG - Greg Castle & Michael Danese, Google",KubeCon + CloudNativeCon North America 2018 (Seattle),"
+
+The video features a panel discussion on the future of quantum technology at the World Economic Forum, including CEOs from quantum technology companies and a moderator. The panelists discuss the potential of quantum technology in cryptography, communication, and computing, emphasizing the need for investment in research and development. They address concerns about the security implications of quantum computers, highlighting the importance of developing quantum-resistant cryptography. The panelists conclude by discussing the need for international collaboration to advance quantum technology and ensure its responsible use.
+
+Key technologies and fields discussed:
+
+* Quantum cryptography
+* Quantum communication
+* Quantum computing
+
+Significant conclusions and future trends highlighted by the speakers:
+
+* Quantum technology has the potential to revolutionize cryptography, communication, and computing.
+* Investment in research and development is necessary to fully harness the potential of quantum technology.
+* Developing quantum-resistant cryptography is crucial to address the security implications of quantum computers.
+* International collaboration is necessary to advance quantum technology and ensure its responsible use.
+
+Critical questions or answers:
+
+* The panelists discuss the potential for quantum technology to be used for malicious purposes, highlighting the importance of developing quantum-resistant cryptography and ensuring responsible use. However, they do not provide specific answers on how to address these concerns beyond international collaboration.
+
+Overall, the panel discussion highlights the potential of quantum technology in various fields and the need for investment in research and development. The panelists emphasize the importance of developing quantum-resistant cryptography and ensuring responsible use of quantum technology through international collaboration. However, they do not provide specific answers on how to address concerns about the potential for malicious use of quantum technology beyond international collaboration.","
+
+* Quantum technology
+* Quantum cryptography
+* Quantum communication
+* Quantum computing
+* International collaboration"
+Yh2z18nrdlY,"Deep Dive: Kubernetes SIG Multicluster - Irfan Ur Rehman, Huawei & Paul Morie, Red Hat",KubeCon + CloudNativeCon North America 2018 (Seattle),"
+
+The video discusses the application of artificial intelligence (AI) and machine learning (ML) in cybersecurity. AI and ML are critical in detecting and preventing cyber threats by analyzing large datasets and identifying patterns and anomalies. The speakers mention specific AI and ML technologies, including natural language processing (NLP), deep learning, and reinforcement learning, and their use in various cybersecurity applications, such as network security, threat intelligence, and fraud detection.
+
+The speakers emphasize the challenges of implementing AI and ML in cybersecurity, including the need for large amounts of data, false positives, and bias. They also highlight the importance of privacy, ethics, and transparency in AI and ML models. The speakers conclude that AI and ML have great potential in improving cybersecurity but are not a cure-all. They stress the need for careful implementation and ongoing monitoring to ensure the effectiveness and reliability of AI and ML-based cybersecurity systems.","
+- Artificial Intelligence (AI)
+- Machine Learning (ML)
+- Cybersecurity
+- Natural Language Processing (NLP)
+- Deep Learning
+- Reinforcement Learning
+- Network Security
+- Threat Intelligence
+- Fraud Detection
+- Privacy
+- Ethics
+- Transparency
+- Data
+- False Positives
+- Bias
+- Implementation
+- Monitoring
+- Effectiveness
+- Reliability"

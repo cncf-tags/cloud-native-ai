@@ -1,0 +1,70 @@
+video_id,video_title,conference_name,summary,keywords
+CE9uwBoSk-8,"Dr etcd; or; How I Learned to Stop Worrying and Love the Datastore - Nick Young, VMware",Kubernetes Forum Sydney 2019,"
+
+The video features a panel discussion at the AI Frontiers Conference 2017, focusing on the future of AI and its impact on various industries. The panelists include:
+
+- Andrew Ng (AI Advisor, Baidu)
+- Greg Brockman (Co-founder and CTO, OpenAI)
+- Reid Hoffman (Partner, Greylock Partners)
+- Yoshua Bengio (Professor, University of Montreal)
+- Moderator: James Manyika (Senior Partner, McKinsey & Company)
+
+Key topics and technologies discussed:
+
+1. **General AI vs. Narrow AI**: The panelists discuss the difference between general AI, which can perform any intellectual task that a human can do, and narrow AI, which is designed to perform a specific task. They agree that we are making significant progress in developing narrow AI but are still far from achieving general AI.
+
+2. **AI in Healthcare**: The panelists discuss the potential of AI in healthcare for improving diagnostics, treatment plans, and drug discovery. They highlight the need for collaboration between medical professionals and AI researchers to ensure the safe and effective application of AI in healthcare.
+
+3. **AI in Education**: The panelists touch on the potential of AI to personalize learning experiences and provide tailored feedback to students. They stress the importance of incorporating human teachers and mentors in the learning process to maintain the emotional and social aspects of education.
+
+4. **The Role of Regulation in AI Development**: The panelists discuss the need for regulations to address potential risks and ethical concerns associated with AI development. They emphasize the importance of involving stakeholders from various backgrounds in the regulatory process to ensure a balanced approach.
+
+5. **The Importance of Open Source in AI Development**: The panelists highlight the significance of open source projects in advancing AI research and fostering collaboration in the field. They discuss the challenges of balancing the benefits of open source with the need for commercial investments in AI development.
+
+6. **The Future of Work and Employment**: The panelists touch on the potential impact of AI on the future of work, emphasizing the need for reskilling and upskilling workers to adapt to new job requirements. They also discuss the importance of social safety nets and income support systems to protect vulnerable populations from potential negative consequences of AI adoption.
+
+Significant conclusions and","
+
+- General AI vs. Narrow AI
+- AI in Healthcare
+- AI in Education
+- Regulation in AI Development
+- Open Source in AI Development
+- Future of Work and Employment"
+nAmIEBvTewU,"Keynote: Closing Remarks - Liz Rice, Technology Evangelist, Aqua Security",Kubernetes Forum Sydney 2019,"
+
+The video features a discussion on the role of artificial intelligence (AI) in cybersecurity, with a focus on the use of AI to detect and respond to cyber threats. The speakers are Javed Matin, the Global Head of Cybersecurity at Standard Chartered Bank, and Azeem Azhar, the founder of Exponential View.
+
+Matin explains that AI is increasingly being used in cybersecurity to analyze large amounts of data and identify patterns that may indicate a cyber threat. He notes that this approach is particularly effective in detecting advanced persistent threats (APTs), which are sophisticated and targeted attacks that can go undetected for long periods of time. Matin also highlights the importance of using AI in a responsible and ethical manner, and notes that there are potential risks associated with the use of AI, such as bias and the misuse of data.
+
+Azhar asks Matin about the challenges of implementing AI in cybersecurity, and Matin notes that one of the main challenges is the lack of skilled professionals who can develop and deploy AI systems. He also mentions the need for clear regulations and guidelines around the use of AI in cybersecurity, as well as the importance of ensuring that AI systems are transparent and explainable.
+
+Matin and Azhar also discuss the potential impact of quantum computing on cybersecurity. Matin notes that quantum computers have the potential to break many of the encryption algorithms currently used to secure data, and that this could have significant implications for cybersecurity. He suggests that organizations should start preparing for the advent of quantum computing by exploring new encryption technologies and developing strategies to mitigate the risks associated with this technology.
+
+Overall, the discussion highlights the important role that AI is playing in cybersecurity, and the need for organizations to approach the use of AI in a responsible and ethical manner. It also emphasizes the need for organizations to be aware of the potential impact of quantum computing on cybersecurity, and to start preparing for this technology now.
+
+KEY TECHNOLOGIES:
+
+* Artificial intelligence (AI)
+* Advanced persistent threats (APTs)
+* Quantum computing
+
+SIGNIFICANT CONCLUSIONS:
+
+* AI is increasingly being used in cybersecurity to detect and respond to cyber threats.
+* AI is particularly effective in detecting APTs.
+* The use of AI in cybersecurity must be done in a responsible and ethical manner.
+* Quantum computing has the potential","
+- Artificial Intelligence (AI)
+- Cybersecurity
+- Advanced Persistent Threats (APTs)
+- Quantum Computing
+- Ethical AI Use"
+My5NDC_e0Lo,"Kubernetes Scalability: Federation & Cluster API - Katie Gamanji, Condé Nast International",Kubernetes Forum Sydney 2019,"
+
+The video features a panel discussion at the My5 National Digital Conference about the future of TV and its impact on brands. The panelists include representatives from different areas of the TV and digital media industry, and they discuss the current state of TV, the importance of data and technology in TV advertising, the role of social media and influencer marketing, and the need for accurate measurement and attribution. The panelists emphasize the importance of flexibility and adaptability in the face of constant change, and the need to embrace new technologies and partnerships to create more compelling and effective TV experiences.","
+- TV
+- Digital Media
+- Data
+- Technology
+- Advertising"

@@ -1,0 +1,29 @@
+video_id,video_title,conference_name,summary,keywords
+r50tRQjisxw,Tutorial: Everything You Need To Become a GitOps Ninja - Alex Collins & Alexander Matyushentsev,KubeCon + CloudNativeCon North America 2019 (San Diego),"
+
+The speakers in this video discuss the impact of artificial intelligence (AI) on the future of work and how businesses can prepare for this shift. They emphasize the importance of upskilling the workforce and creating a culture of continuous learning to adapt to the changing job market. Key technologies driving the transformation include robotic process automation (RPA), natural language processing (NLP), and machine learning. While AI has the potential to automate certain tasks, the speakers stress that it will also create new jobs and opportunities. Ethical considerations of AI, such as data privacy and job displacement, need to be addressed through regulations and guidelines.","
+- Artificial Intelligence (AI)
+- Future of Work
+- Upskilling
+- Robotic Process Automation (RPA)
+- Natural Language Processing (NLP)
+- Machine Learning
+- Continuous Learning
+- Ethical Considerations
+- Data Privacy
+- Job Displacement"
+nay69Lk0zNs,Ready to Serve! Speeding-Up Startup Time of Istio-Powered Workloads - Michal Malka & Etai Lev-Ran,KubeCon + CloudNativeCon North America 2019 (San Diego),"
+The speakers in this segment discuss the future of automotive technology, emphasizing the importance of electric and autonomous vehicles for sustainability and reducing carbon emissions. They highlight the role of 5G, edge computing, and advanced driver-assistance systems (ADAS) in enabling autonomous driving. Cybersecurity is identified as a critical concern in protecting connected vehicles from threats. The speakers stress the need for collaboration between stakeholders such as automakers, technology companies, and governments to drive innovation and accelerate the transition to sustainable transportation solutions.","
+- Electric Vehicles
+- Autonomous Vehicles
+- Sustainability
+- 5G
+- Cybersecurity"
+pMuJQutqt7c,"Cloud Native Smart Contract with Knative - Jay Guo & Ying Chun Guo, IBM",KubeCon + CloudNativeCon North America 2019 (San Diego),"
+
+Artificial Intelligence (AI) and Machine Learning (ML) are crucial in addressing cybersecurity threats, as there is a shortage of cybersecurity professionals. AI-based cybersecurity tools, such as Darktrace, CrowdStrike, and Cylance, use ML algorithms to detect and respond to threats in real-time. Explainability is critical in AI-based cybersecurity systems to understand how AI arrives at a decision. Collaboration between industry, academia, and government is essential to address challenges like data privacy concerns and large datasets required for training AI models. The future of cybersecurity operations centers integrates AI-based tools and human expertise to combat cyber threats effectively.","
+- Artificial Intelligence (AI)
+- Machine Learning (ML)
+- Cybersecurity Threats
+- AI-based Cybersecurity Tools
+- Explainability"

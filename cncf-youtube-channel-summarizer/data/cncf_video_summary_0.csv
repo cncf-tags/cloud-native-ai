@@ -1,0 +1,36 @@
+video_id,video_title,conference_name,summary,keywords
+BoNrIx93vZE,Create a First AI Program with TypeScript and Serverless WebAssembly,KCD Los Angeles 2024," The video discusses using the Spin SDK for web assembly development to build a JSON API with dynamic responses. The presenters demonstrate creating a simple application and adding dynamic parameters to generate responses based on user queries. They then discuss embedding generation using the Llama 2 model and the concept of retrieval-augmented generation. However, they are unable to complete the demonstration due to issues with the database query. The presenters encourage attendees to check out the workshop's GitHub repository and offer to answer questions related to Spin, web assembly, or other topics.
+
+Key technologies mentioned:
+- Spin SDK for web assembly development
+- JSON API
+- Llama 2 model for retrieval-augmented generation and embedding generation
+- SQLite database with vector similarity search extension
+
+Significant conclusions or future trends:
+- Spin SDK provides a simple and efficient way to build web applications using web assembly
+- Retrieval-augmented generation and embedding generation can be used to create dynamic and relevant responses for user queries
+- SQLite databases with vector similarity search extensions can be used for efficient vector similarity search
+
+Critical questions or answers:
+- Q: How to get started contributing to Spin?
+- A: The presenters suggest looking at the project's GitHub repository for issues labeled ""good first issue"" or ""help wanted,"" and also recommend joining the project's Discord community for support. They also mention a contributor guide on the project's website.","
+- Spin SDK
+- web assembly development
+- JSON API
+- Llama 2 model
+- retrieval-augmented generation"
+3sgPJJTstoA,"Stop using kubectl, and use Git instead! - Hands-on GitOps workshop using Argo CD and Helm",KCD Los Angeles 2024,"
+
+The presented workshop focuses on introducing Argo CD, a declarative GitOps continuous delivery tool for Kubernetes, as part of the Argo project ecosystem. The Argo project includes other tools like Argo Workflows, Argo Rollouts, and Argo Events, each serving different purposes, such as task running, progressive deployments, and event-driven workflows.
+
+Argo CD allows users to manage multiple clusters, applications, environments, and teams. It simplifies the process of continuous delivery for Kubernetes applications by providing a git-based approach to sync applications with their desired state. Users can manage their clusters, applications, and environments through a web UI, CLI, or API.
+
+Additional features of Argo CD include automated synchronization, manual synchronization, sync windows, and the ability to view the difference between the desired state and the current state. There's also support for RBAC, multi-tenancy, and integrations with popular tools like Slack and Sentry.
+
+The workshop also highlights the community-driven nature of the Argo project and encourages users to contribute to the project. The Argo project is the second most active project under the Cloud Native Computing Foundation (CNCF). The workshop concludes by briefly introducing Argo Workflows, Argo Rollouts, and Argo Events.","
+- Argo CD
+- GitOps
+- Kubernetes
+- Continuous Delivery
+- Argo Project Ecosystem"

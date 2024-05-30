@@ -1,0 +1,91 @@
+video_id,video_title,conference_name,summary,keywords
+8DguG0E0Z04,From Screen to Pods: Bootstrapping a Cloud Agnostic System using Kubernetes [I] - Patrick McQuighan,KubeCon + CloudNativeCon North America 2017 (Austin),"
+
+The video features a panel discussion on the future of quantum computing, with a focus on its potential impact on cybersecurity and the challenges in building a large-scale quantum computer. The panelists discuss the need for quantum-safe cryptography to address the threat of quantum computers to digital security and the use of topological qubits to address the challenge of error correction in quantum computing. They also highlight the potential applications of quantum computing in various fields and the need for collaboration between academia, industry, and government to address the challenges in building a large-scale quantum computer.
+
+KEY TECHNOLOGIES:
+
+* Quantum computing
+* Quantum-safe cryptography
+* Topological qubits
+
+MAIN TOPICS DISCUSSED:
+
+* Quantum computing and cybersecurity
+* Challenges in building a large-scale quantum computer
+* Applications of quantum computing
+* Quantum-safe ecosystem and collaboration
+* Education and training in quantum computing
+
+SIGNIFICANT CONCLUSIONS OR FUTURE TRENDS HIGHLIGHTED:
+
+* Quantum computers could potentially break current encryption methods, posing a significant threat to digital security.
+* Topological qubits could potentially address the challenge of error correction in quantum computing.
+* Continued investment in research and development is necessary to realize the full potential of quantum computing.","
+- Quantum computing
+- Quantum-safe cryptography
+- Topological qubits
+- Cybersecurity
+- Error correction"
+IoEFLGe4EFs,"All You Need to Know to Build Your GPU Machine Learning Cloud [B] - Ye Lu, Qunar",KubeCon + CloudNativeCon North America 2017 (Austin),"
+
+The speakers in this tech talk discussed the role of artificial intelligence in cybersecurity, highlighting its applications in threat detection, incident response, and vulnerability management. They emphasized the importance of AI in automating cybersecurity processes, improving efficiency, and making real-time decisions based on patterns and insights. Key challenges in implementing AI in cybersecurity include the need for large volumes of high-quality data and the potential for AI algorithms to be manipulated by adversarial attacks.
+
+Some notable technologies and concepts mentioned during the discussion include:
+
+1. Machine learning algorithms for analyzing data and identifying patterns and anomalies
+2. Real-time decision-making based on AI-generated insights
+3. Adversarial attacks that manipulate data or system behavior to evade detection
+4. The importance of high-quality data in training and refining AI models
+
+The speakers did not explicitly address any critical questions or answers, but the discussion did touch on the need for responsible AI practices to ensure ethical use and address potential biases in AI algorithms. This topic could be explored further in future talks. Overall, the discussion provided a valuable overview of the current state and future potential of AI in cybersecurity.","
+- Artificial Intelligence
+- Cybersecurity
+- Threat Detection
+- Incident Response
+- Vulnerability Management
+- Machine Learning
+- Real-time Decision-making
+- Adversarial Attacks
+- Data Quality
+- Responsible AI Practices"
+OZSA5hmkb0o,Building GPU-Accelerated Workflows with TensorFlow and Kubernetes [I] - Daniel Whitenack,KubeCon + CloudNativeCon North America 2017 (Austin)," 
+
+The discussion revolves around the potential of artificial intelligence (AI) in transforming the manufacturing industry. The speakers emphasize the importance of AI-driven solutions in enhancing productivity, improving product quality, and reducing costs. They highlight the need for real-time data analytics, machine learning, and computer vision to optimize manufacturing processes and ensure seamless integration with existing systems. The speakers also discuss the challenges in implementing AI in manufacturing, such as data privacy, security, and the lack of skilled personnel. They conclude by highlighting the potential of AI to create new business opportunities and revenue streams, as well as the importance of collaboration between industry, academia, and government to drive AI adoption in manufacturing.
+
+KEY TECHNOLOGIES:
+
+* Artificial intelligence (AI)
+* Real-time data analytics
+* Machine learning
+* Computer vision
+
+MAIN TOPICS:
+
+* The potential of AI in transforming manufacturing
+* Enhancing productivity and reducing costs
+* Improving product quality
+* Real-time data analytics and machine learning
+* Computer vision and process optimization
+* Integration with existing systems
+* Challenges in implementing AI in manufacturing
+* New business opportunities and revenue streams
+* Collaboration between industry, academia, and government
+
+SIGNIFICANT CONCLUSIONS:
+
+* AI has the potential to transform the manufacturing industry by enhancing productivity, improving product quality, and reducing costs.
+* Real-time data analytics, machine learning, and computer vision are critical technologies for optimizing manufacturing processes and ensuring seamless integration with existing systems.
+* Collaboration between industry, academia, and government is essential for driving AI adoption in manufacturing.
+
+CRITICAL QUESTIONS AND ANSWERS:
+
+* What are the main challenges in implementing AI in manufacturing?
+	+ The main challenges include data privacy, security, and the lack of skilled personnel.
+* How can AI create new business opportunities and revenue streams in manufacturing?
+	+ AI can enable new business models, such as predictive maintenance and product-as-a-service, and help manufacturers leverage their data assets to create new value for customers.","
+- Artificial intelligence (AI)
+- Real-time data analytics
+- Machine learning
+- Computer vision
+- Manufacturing transformation"

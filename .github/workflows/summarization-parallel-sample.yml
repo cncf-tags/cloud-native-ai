@@ -1,0 +1,75 @@
+name: Run summmarization-parallel
+env:
+    WATSONX_KEY: ${{secrets.WATSONX_KEY}}
+    WATSONX_PROJECT_ID: ${{secrets.WATSONX_PROJECT_ID}}
+    WATSONX_URL: ${{secrets.WATSONX_URL}}
+on:
+  workflow_dispatch:
+
+permissions:
+  pull-requests: write
+  contents: write
+  repository-projects: write
+  packages: write
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        index: [0, 40, 81, 122, 163, 204, 245, 286, 327, 368, 409, 450, 491, 532, 573, 614, 655, 696, 737, 778, 819, 860, 901, 942, 983, 1024, 1065, 1106, 1147, 1188, 1229, 1270, 1311, 1352, 1393, 1434, 1475, 1516, 1557, 1598, 1639, 1680, 1721, 1762, 1803, 1844, 1885, 1926, 1967, 2008, 2049, 2090, 2131, 2172, 2213, 2254, 2295, 2336, 2377, 2418, 2459, 2500, 2541, 2582, 2623, 2664, 2705, 2746, 2787, 2828, 2869, 2910, 2951, 2992, 3033, 3074, 3115, 3156, 3197, 3238, 3279, 3320, 3361, 3402, 3443, 3484, 3525, 3566, 3607, 3648, 3689, 3730, 3771, 3812, 3853, 3894, 3935, 3976, 4017, 4058, 4099, 4140, 4181, 4222, 4263, 4304, 4345, 4386, 4427, 4468, 4509, 4550, 4591, 4632, 4673, 4714, 4755, 4796, 4837, 4878, 4919, 4960, 5001, 5042, 5083, 5124, 5165, 5206, 5247, 5288, 5329, 5370, 5411, 5452, 5493, 5534, 5575, 5616, 5657, 5698, 5739, 5780, 5821, 5862, 5903, 5944, 5985, 6026, 6067, 6108, 6149, 6190, 6231, 6272, 6313, 6354, 6395, 6436, 6477, 6518, 6559, 6600, 6641, 6682, 6723, 6764, 6805, 6846, 6887, 6928, 6969, 7010, 7051, 7092, 7133, 7174, 7215, 7256, 7297, 7338, 7379, 7420, 7461, 7502, 7543, 7584, 7625, 7666, 7707, 7748, 7789, 7830, 7871, 7912, 7953, 7994, 8035, 8076, 8117, 8158, 8199, 8240, 8281, 8322, 8363, 8404, 8445, 8486, 8527, 8568, 8609, 8650, 8691, 8732, 8773, 8814, 8855, 8896, 8937, 8978, 9019, 9060, 9101, 9142, 9183, 9224, 9265, 9306, 9347, 9388, 9429, 9470, 9511, 9552, 9593, 9634, 9675, 9716, 9757, 9798, 9839, 9880, 9921, 9962, 10003, 10044, 10085, 10126, 10167, 10208, 10249, 10290, 10331, 10372, 10413, 10454]
+
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'  # Specify the Python version you need
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r cncf-youtube-channel-summarizer/requirements.txt
+
+    - name: Run script for iteration
+      run: |
+          start=${{ matrix.index }}
+          end=$((start + 40))
+          echo "Running script with arguments: $start, $end"
+          python cncf-youtube-channel-summarizer/transcript_summarizer_parallel.py $start $end
+
+    - name: Upload Summaries
+      uses: actions/upload-artifact@v4
+      with:
+          name: cncf_video_summary_${{ matrix.index }}_${{ matrix.index_plus_one }}.csv
+          path: cncf-youtube-channel-summarizer/data/cncf_video_summary_${{ matrix.index}}.csv
+
+    - name: Upload missed_video_id 
+      uses: actions/upload-artifact@v4
+      with:
+          name: missed_video_id_${{ matrix.index }}_${{ matrix.index_plus_one }}.txt
+          path: cncf-youtube-channel-summarizer/data/missed_video_id_${{ matrix.index}}.txt
+
+    - name: Commit Change for "cncf_video_summary.csv"
+      run: |
+          git config --global user.email "dependabot[bot]@users.noreply.github.com" 
+          git config --global user.name "dependabot[bot]"
+          git pull origin main
+          git add cncf-youtube-channel-summarizer/data/cncf_video_summary_${{matrix.index}}.csv || exit 0
+          git commit -m "Add Summaries and Keywords" --signoff || exit 0
+          git push
+
+
+    - name: Commit Change for "missed_video_id.txt"
+      run: |
+          git config --global user.email "dependabot[bot]@users.noreply.github.com" 
+          git config --global user.name "dependabot[bot]"
+          git pull origin main
+          git add cncf-youtube-channel-summarizer/data/missed_video_id_${{matrix.index}}.txt || exit 0
+          git commit -m "Add missed_video_id" --signoff || exit 0
+          git push
+      env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}

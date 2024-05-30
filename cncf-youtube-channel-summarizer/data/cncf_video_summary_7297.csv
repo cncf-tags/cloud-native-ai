@@ -1,0 +1,31 @@
+video_id,video_title,conference_name,summary,keywords
+EaCUFOehNnY,"Cruise’s Self-Driving Networking Journey - Bernard Van De Walle & Jon Yucel, Cruise",KubeCon + CloudNativeCon North America 2019 (San Diego),"
+
+The Future of AI in Healthcare
+=============================
+
+* Dr. Eric Topol, Cardiologist and Geneticist
+* Dr. Stephanie Reel, Chief Information Officer, Johns Hopkins Medicine
+* Moderated by David Rotman, Editor, MIT Technology Review
+
+Key Points:
+-----------
+
+1. AI should augment human decision-making, not replace clinicians.
+2. AI has the potential to improve diagnostics, personalize treatments, and enhance patient care, especially in genomics and precision medicine.
+3. Careful implementation of AI in healthcare is needed, focusing on data privacy, transparency, and addressing potential biases.
+4. Integrating AI into existing healthcare systems and workflows is challenging, requiring clinician involvement and training.
+5. AI can address healthcare disparities and improve access to care for underserved populations.
+6. High-quality, diverse datasets are critical for developing and implementing AI in healthcare.
+
+Critical Questions:
+------------------
+
+* Dr. Topol: What if the data used to train AI models is not diverse enough, perpetuating existing biases in healthcare?
+* Dr. Reel: How do we address data privacy and security in AI implementation, protecting patients' data and using it ethically?
+* Dr. Topol: How do we ensure clinicians are involved in AI development and implementation, understanding the limitations and potential biases of AI models?","
+- AI in Healthcare
+- Augment Human Decision-Making
+- Personalized Treatments
+- Data Privacy
+- Clinician Involvement"

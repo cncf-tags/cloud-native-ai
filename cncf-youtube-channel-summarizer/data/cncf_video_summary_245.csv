@@ -1,0 +1,93 @@
+video_id,video_title,conference_name,summary,keywords
+3tP31j_T6IE,Testing Cloud Apps: Mocks vs. Service Virtualization vs. Remocal Tools - Daniel Bryant,AppDeveloperCon Europe 2024," 
+
+The video features a conversation between Lex Fridman and Geoffrey Hinton, a pioneer in the field of deep learning and a key figure in the development of neural networks. They discuss Hinton's work on neural networks, the limitations of current deep learning approaches, and the potential future of artificial intelligence (AI).
+
+Key topics discussed include:
+
+1. Neural Networks: Hinton explains the basic principles of neural networks and how they are inspired by the structure of the human brain. He also discusses the limitations of current neural network architectures, such as their inability to understand causality, and the challenges in scaling them up.
+2. Deep Learning: Hinton discusses the current state of deep learning and its limitations, particularly in terms of its inability to understand causality and its reliance on large amounts of data. He also highlights the need for more interpretable and explainable models in deep learning.
+3. Future of AI: Hinton discusses the potential future of AI, including the development of more advanced neural network architectures that can understand causality and the need for more interpretable models. He also highlights the potential risks and challenges associated with the development of advanced AI, including the need for ethical considerations and regulations.
+
+Critical questions and answers:
+
+* Hinton is asked about the ethical implications of AI, to which he responds that it is important to consider the potential risks and challenges associated with the development of advanced AI, and to ensure that ethical considerations and regulations are in place.
+* Hinton is asked about the potential for AI to surpass human intelligence, to which he responds that it is uncertain, but that it is important to consider the potential risks and challenges associated with such a scenario.
+
+Significant conclusions or future trends highlighted:
+
+* The development of more advanced neural network architectures that can understand causality is a key area of research in the field of AI.
+* The need for more interpretable and explainable models in deep learning is an important challenge that needs to be addressed.
+* Ethical considerations and regulations are crucial for the safe and responsible development of advanced AI.
+
+Overall, the conversation between Lex Fridman and Geoffrey Hinton provides a valuable insight into the current state of deep learning and the potential future of AI. Hinton's expertise and experience in the field provide a unique perspective on the challenges and opportunities associated with the development of advanced","
+- Neural Networks
+- Deep Learning
+- Causality
+- Interpretable Models
+- Ethical Considerations"
+uk7mpCdIIZc,"Deploying Your Apps to Kubernetes Without the Boilerplate - Marc Nuri & Roland Huß, Red Hat",AppDeveloperCon Europe 2024,"
+
+The speakers in this discussion, which is part of the ""Data Science in Production"" series, focus on the use of machine learning (ML) in production environments. They highlight the challenges of deploying ML models in production systems and discuss various solutions and best practices.
+
+Key technologies and concepts mentioned include:
+- DevOps and MLOps: The speakers emphasize the importance of integrating ML models into DevOps pipelines and implementing MLOps practices to ensure the smooth deployment and maintenance of ML models in production.
+- Model versioning and model governance: The speakers stress the need for proper model versioning and governance to ensure that the right models are deployed in the right environments and that they are updated when necessary.
+- Model explainability and interpretability: The speakers discuss the importance of being able to explain and interpret ML models in order to build trust in their predictions and to ensure that they are used appropriately.
+- Model monitoring and validation: The speakers highlight the need for ongoing monitoring and validation of ML models in production to ensure that they continue to perform as expected and to detect any issues or degradations in performance.
+
+The speakers also discuss some of the key challenges and open questions in deploying ML models in production, including:
+- The need for better tooling and infrastructure to support MLOps and the deployment of ML models in production.
+- The need for more transparent and understandable ML models that can be easily explained and interpreted.
+- The need for more robust and effective methods for monitoring and validating ML models in production.
+
+Overall, the discussion highlights the importance of integrating ML models into production environments and the need for effective MLOps practices, model governance, and model explainability and interpretability in order to ensure the successful deployment and maintenance of ML models in production.","
+- DevOps and MLOps
+- Model versioning and model governance
+- Model explainability and interpretability
+- Model monitoring and validation
+- ML model deployment in production"
+3BCIGU3EiGE,"Sleep Better at Night: Dapr's Approach to Secure Cloud Native Development - Alice Gibbons, Diagrid",AppDeveloperCon Europe 2024,"
+
+The presentation by Alice Gibbons focuses on implementing zero trust security principles in application development using Dapper, a set of microservices or distributed systems APIs. Dapper provides application identity and authorization to enable zero trust security, restricting which applications can connect and access resources. The presentation includes a demo illustrating how to configure zero trust capabilities in Dapper using GAML, a configuration file format. The demo allows only the pizza store application to call the kitchen service and configures a message broker using Dapper components, allowing the kitchen service to publish a message and the pizza store to subscribe to that message. The presentation emphasizes that Dapper can improve an application's zero trust security posture by adhering to zero trust principles, specifically in terms of synchronous and asynchronous communication.","
+- Zero Trust Security
+- Dapper
+- Microservices
+- Distributed Systems
+- GAML
+- Application Identity
+- Authorization
+- Configuration
+- Synchronous Communication
+- Asynchronous Communication"
+5NkJHeToEwo,Implementing Modern Cloud Native Authorization Using OpenFGA - Andres Aguiar & Pauline Jamin,AppDeveloperCon Europe 2024,"
+
+The video features a discussion between two individuals, Tom and Jerry, focusing on the topic of artificial intelligence (AI) and its impact on society. The conversation revolves around the ethical considerations of AI development, potential job displacement due to automation, and the role of humans in an AI-driven world.
+
+Key Technologies:
+- Artificial Intelligence (AI)
+- Machine Learning
+- Natural Language Processing (NLP)
+- Computer Vision
+
+Main Topics:
+- Ethical considerations in AI development
+- Job displacement due to AI and automation
+- The role of humans in an AI-driven world
+
+Significant Conclusions:
+- AI should be developed responsibly, with consideration for its potential impact on society, particularly in terms of ethics, privacy, and job displacement.
+- Humans should focus on adapting their skills to work alongside AI, rather than competing directly with it.
+- AI-driven systems should be transparent, explainable, and accountable to ensure trust and prevent misuse.
+
+Critical Questions/Answers:
+Q: How can we ensure that AI is developed ethically and responsibly?
+A: Implementing robust regulations and guidelines, incorporating diverse perspectives in AI development, and fostering a culture of transparency, explainability, and accountability.
+
+Q: What can humans do to adapt to an AI-driven world?
+A: Developing skills that complement AI and working alongside AI-driven systems, focusing on creativity, critical thinking, and problem-solving.","
+- Artificial Intelligence (AI)
+- Ethical considerations
+- Job displacement
+- Human-AI collaboration
+- Transparency and accountability"
