@@ -1,0 +1,130 @@
+video_id,video_title,conference_name,summary,keywords
+rFaWmd7Y7i0,"Declarative Everything - Cici Huang, Google",KubeCon + CloudNativeCon NA 2023,"
+
+The video discusses the potential of blockchain technology beyond cryptocurrencies, focusing on its use in healthcare and supply chain management. The speakers highlight the benefits of blockchain in terms of data security, transparency, and interoperability. They also touch upon the challenges of implementing blockchain, such as scalability and regulatory issues.
+
+KEY TECHNOLOGIES:
+
+* Blockchain
+* Cryptocurrencies
+* Smart contracts
+* Decentralized applications (DApps)
+
+MAIN TOPICS:
+
+* Blockchain in healthcare: The speakers discuss how blockchain can improve patient data management, including electronic health records (EHRs) and clinical trials. They also touch upon the use of blockchain in medical research and drug development.
+* Blockchain in supply chain management: The speakers highlight the potential of blockchain to increase supply chain transparency, traceability, and efficiency, particularly in industries such as food, pharmaceuticals, and luxury goods.
+* Challenges and limitations of blockchain: The speakers acknowledge the challenges of implementing blockchain, including scalability, regulatory issues, and the need for standardization.
+
+SIGNIFICANT CONCLUSIONS OR FUTURE TRENDS:
+
+* Blockchain has the potential to revolutionize healthcare and supply chain management by improving data security, transparency, and interoperability.
+* The implementation of blockchain requires addressing several challenges, including scalability, regulatory issues, and the need for standardization.
+* Further research and collaboration between industry, government, and academia are necessary to fully realize the potential of blockchain.
+
+CRITICAL QUESTIONS OR ANSWERS:
+
+* Q: What are the main benefits of using blockchain in healthcare and supply chain management?
+  A: The main benefits include improved data security, transparency, and interoperability.
+* Q: What are the main challenges of implementing blockchain in healthcare and supply chain management?
+  A: The main challenges include scalability, regulatory issues, and the need for standardization.
+* Q: What are the next steps in realizing the potential of blockchain in healthcare and supply chain management?
+  A: Further research and collaboration between industry, government, and academia are necessary to address the challenges and fully realize the potential of blockchain.
+```","
+- Blockchain
+- Healthcare
+- Supply chain management
+- Data security
+- Transparency"
+n2ZHy90PrUQ,"The Eight Fallacies of Distributed Cloud Native Communities - Madhav Jivrajani & Nabarun Pal, VMware",KubeCon + CloudNativeCon NA 2023,"
+
+The video transcript features a presentation and subsequent discussion, with the speakers discussing aspects such as feedback, social media interactions, and the availability of the recording. The speakers emphasize the importance of feedback and encourage attendees to engage with them through social media or by scanning a QR code to provide feedback on the session. No specific technologies or future trends are mentioned in the transcript. The speakers' focus on feedback and engagement highlights the importance of audience interaction and improving the overall quality of the presentation and discussion.","
+- Feedback
+- Social Media Interactions
+- QR Code
+- Audience Interaction
+- Presentation Quality"
+cvfX-ORpKPQ,Insights and Gotchas from the Zero-Downtime Migration of 10000+ Cloud Hosted... Prabhakar Palanivel,KubeCon + CloudNativeCon NA 2023,"
+
+The speakers in this video share their experiences and challenges in managing cloud infrastructure, with a focus on handling I/O throttling and latency issues using block volume technology. They emphasize the importance of sharing best practices and learning from each other's experiences, and encourage the audience to continue the discussion. Key technologies mentioned include block volume and cloud infrastructure, with collaboration and knowledge sharing being critical for effective management. No specific critical questions or answers were provided in the transcript.","
+- Cloud Infrastructure
+- Block Volume
+- I/O Throttling
+- Latency
+- Collaboration"
+_a8fxJDzCJU,"Sidecar Containers Are Built-in to Kubernetes: What, How, and Why Now?- Todd Neal & Sergey Kanzhelev",KubeCon + CloudNativeCon NA 2023,"
+
+The presentation focused on Kubernetes sidecars, which are a pattern for implementing workloads where an application is deployed in a container and needs to communicate with other components for tasks like collecting telemetry, accessing the network, managing security, and accessing data. Sidecars are designed to address the issue of sidecars steering the main container, and they were initially designed for web apps where the sidecar and main container run in parallel and share resources.
+
+However, sidecars have limitations in terms of termination order and graceful termination, which are important for long-running jobs. The Kubernetes community has addressed these issues by experimenting with and implementing new features, such as termination ordering and new workload types like AI/ML, HPC, and hardware management.
+
+Sidecars are implemented as init containers with a restart policy of 'always', and termination ordering is more complicated: pre-stop hooks are called simultaneously for main containers and sidecars, and the sidecars are not stopped until all main containers have completed. This allows for dependencies between main containers and sidecars.
+
+When using sidecars, it is essential to consider requests and limits, minimize the time before containers go ready, and exit pre-stop hooks as soon as possible. Metrics and cost accounting tools should also be updated to account for sidecars.
+
+Future features that may be added to sidecars include security boundaries, resource reuse, better OOM handling, and percentage of usage.
+
+Overall, the presentation provided a clear overview of Kubernetes sidecars, their limitations, and future features. The speakers also highlighted the importance of termination ordering and graceful termination for long-running jobs.","
+- Kubernetes sidecars
+- Container communication
+- Termination ordering
+- Graceful termination
+- Future features (security boundaries, resource reuse, better OOM handling, percentage of usage)"
+4mYUyAeyr-U,"The Cluster Killer Bug: Learning API Priority and Fairness the Hard Way - Eddie Zaneski, Independent",KubeCon + CloudNativeCon NA 2023,"
+The video shares lessons learned from a team that increased Kubernetes (k8s) cluster sizes and concurrency limits, revealing unexpected issues related to the GKE dashboard and API token permissions. The presentation emphasizes the importance of testing new features, reading documentation, and providing feedback to developers, as well as the need for more community members to test and provide feedback on knobs and features. Key open issues include a bug related to 429s (Too Many Requests) and 504s (Gateway Timeout), with a plan for further investigation. Overall, the team stresses the importance of understanding logs and metrics, slowing down to analyze issues, and looking at historical and change log data to resolve problems.","
+- Kubernetes (k8s)
+- GKE dashboard
+- API token permissions
+- Testing new features
+- Documentation"
+ecx-yp4g7YU,"The Complexity on Scaling ML Pipelines on Kubernetes Using Tekton - Tommy Li, IBM",KubeCon + CloudNativeCon NA 2023,"
+IBM uses Tecton Pipelines, an open-source Kubernetes-native CI/CD system for building and managing ML pipelines, on OpenShift. Tecton Pipelines allows for conditionals, custom controllers, and sharing of parameters and metadata. IBM collaborated with the Tecton community to add features such as error handling, standard API definitions, and a custom task system. These enhancements address limitations in the initial implementation, including the lack of caching, garbage collection, and customizable termination logic. IBM uses Tecton Pipelines on OpenShift as the foundation for their ML infrastructure.","
+- IBM
+- Tecton Pipelines
+- OpenShift
+- CI/CD system
+- ML pipelines"
+3U_qoCCZyNk,Rapidly Scaling for Breaking News with Karpenter and KEDA - Mel Cone & Deepak Goel,KubeCon + CloudNativeCon NA 2023,"
+
+The discussion revolves around managing and scaling Kubernetes clusters during breaking news events, focusing on a shared platform and infrastructure. The number of nodes in a cluster during these events is significant, but not explicitly stated. Managed nodes, such as AWS Fargate, are used for Ingress controller workloads, but not for other workloads in the cluster, which are managed through different node groups. The main focus is on providing a clear, responsive, and easy-to-use platform for users, minimizing their need to handle infrastructure issues.
+
+KEY TECHNOLOGIES:
+- Kubernetes
+- Carpenter (Kubernetes cluster autoscaling)
+- kada (Kubernetes event-driven autoscaling)
+- AWS Fargate (Managed Kubernetes nodes)
+
+MAIN TOPICS:
+- Managing and scaling Kubernetes clusters during breaking news events
+- Shared platform and infrastructure
+- Responsiveness and ease-of-use for users
+- Managed nodes for Ingress controller workloads
+- Different node groups for other workloads
+
+CRITICAL QUESTIONS & ANSWERS:
+- Q: What is the actual number of nodes in a cluster during breaking news events?
+  A: The exact number is not provided, but it was significantly high, leading to infrastructure changes.
+
+- Q: Are AWS Fargate and managed nodes used for other workloads in the cluster?
+  A: No, they are only used for Ingress controller workloads. Other workloads are managed through different node groups.","
+- Kubernetes
+- Scaling
+- Breaking news events
+- Managed nodes
+- AWS Fargate"
+2GQnzZhmGRc,Environmentally Sustainable AI via Power-Aware Batch Scheduling - Atanas Atanasov & Daniel Wilson,KubeCon + CloudNativeCon NA 2023,"
+
+The speakers discuss power management in containerized environments, focusing on GPU, CPU, and DRAM power caps. They describe a system for controlling GPU power caps using NVIDIA's NVML software library and a driver interface, with plans to add support for other devices and vendors. The speakers also mention using Linux's MSR driver and MSR safe driver for CPU and DRAM power caps. They highlight future directions, including finer granularity in power management for containers at the container level, potential integration with the kernel and scheduler events, and possible latency challenges associated with frequency changes.","
+- Power Management
+- Containerized Environments
+- GPU Power Caps
+- NVIDIA NVML
+- CPU and DRAM Power Caps"
+hoXaYP2BSOo,"Reliable RPCs Over Hybrid Clouds and the End-to-End Argument - Wenbo Zhu & Vinod Lasrado, Google Inc",KubeCon + CloudNativeCon NA 2023,"
+
+The speakers in this video discussion focus on optimizing microservices by tuning network parameters such as Java threads and TCP in multicloud deployments. They discuss the potential benefits of exposing network configuration as formal configurations for microservices, and note the current lack of research and discussion on this topic. The speakers highlight the need to understand the problem better to avoid false positives, and express hope that attendees enjoy the conference and the lunch. Key technologies mentioned include microservices, Java threads, TCP, multicloud deployments, passive monitoring, and centralized control plane health tracking. The main conclusion is the potential for improved microservice performance through network tuning, with future trends including further research and real-time performance improvements.","
+- Microservices
+- Network tuning
+- Java threads
+- TCP
+- Multicloud deployments"
