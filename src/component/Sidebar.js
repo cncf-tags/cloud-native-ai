@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import Papa from 'papaparse';
 import { useRouter } from 'next/router';
+import Link from 'next/link';
 
 const Sidebar = () => {
   const router = useRouter();
   // State to track the selected button, conference data, and dropdown visibility
   const [selectedButton, setSelectedButton] = useState(null);
   const [conferences, setConferences] = useState([]);
+  const [selectedDropDownButton, setSelectedDropDownButton] = useState(null);
   const [dropdownVisible, setDropdownVisible] = useState(false);
 
   // Function to handle button click and update selectedButton state
@@ -26,43 +28,43 @@ const Sidebar = () => {
     }
   };
 
-  // Function to fetch conference data from CSV file
-  const fetchConferences = () => {
-    fetch('https://raw.githubusercontent.com/cncf-tags/cloud-native-ai/main/cncf-youtube-channel-summarizer/data/sample_cncf_video_summary.csv')
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
-        }
-        return response.text();
-      })
-      .then((text) => {
-        // Parse CSV data using PapaParse and extract 'conference_name' column
-        Papa.parse(text, {
-          header: true,
-          skipEmptyLines: true,
-          complete: (result) => {
-            const uniqueConferences = new Set();
-            const conferencesData = result.data.reduce((acc, row) => {
-              const name = row['conference_name'].trim();
-              if (!uniqueConferences.has(name)) {
-                uniqueConferences.add(name);
-                acc.push({ name });
-              }
-              return acc;
-            }, []);
-            setConferences(conferencesData);
-          },
-        });
-      })
-      .catch((error) => {
-        console.error('Error fetching conference data:', error);
+// Function to fetch conference data from CSV file
+const fetchConferences = () => {
+  fetch('https://raw.githubusercontent.com/cncf-tags/cloud-native-ai/main/cncf-youtube-channel-summarizer/data/cncf_video_summary_29.csv')
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.text();
+    })
+    .then((text) => {
+      // Parse CSV data using PapaParse and extract 'video_id' and 'conference_name' columns
+      Papa.parse(text, {
+        header: true,
+        skipEmptyLines: true,
+        complete: (result) => {
+          const uniqueConferences = new Set();
+          const conferencesData = result.data.reduce((acc, row) => {
+            const name = row['conference_name'].trim();
+            const videoId = row['video_id'].trim();
+            if (!uniqueConferences.has(name)) {
+              uniqueConferences.add(name);
+              acc.push({ video_id: videoId, conference_name: name });
+            }
+            return acc;
+          }, []);
+          setConferences(conferencesData);
+        },
       });
-  };
+    })
+    .catch((error) => {
+      console.error('Error fetching conference data:', error);
+    });
+};
 
   // Function to handle click on dropdown button
-  const handleDropdownButtonClick = () => {
-    // Navigate to the new page when dropdown button is clicked
-    router.push('/conferences/NewPage');
+  const handleDropdownButtonClick = (name) => {
+    setSelectedDropDownButton(name);
   };
 
   return (
@@ -86,9 +88,11 @@ const Sidebar = () => {
                   {/* Render conference items */}
                   {conferences.map((conference, index) => (
                     <li key={index} className="py-1">
-                      <button type="button" className="text-left text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 w-full p-1 rounded-lg transition" onClick={handleDropdownButtonClick}>
-                        {conference.name}
-                      </button>
+                      <Link href={'/conferences/'+ conference.video_id}>
+                        <button type="button" className={`flex items-center p-2 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 ${selectedDropDownButton === conference.video_id ? 'bg-blue-500 text-black' : ''}`} onClick={() => handleDropdownButtonClick(conference.video_id)}>
+                         {conference.conference_name}
+                        </button>
+                      </Link>
                     </li>
                   ))}
                 </ul>

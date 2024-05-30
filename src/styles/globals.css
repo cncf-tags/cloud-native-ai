@@ -26,6 +26,31 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: #333;
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+p {
+  color: #666;
+  font-size: 1.2em;
+  line-height: 1.6;
+}
+
+p strong {
+  color: #000;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
