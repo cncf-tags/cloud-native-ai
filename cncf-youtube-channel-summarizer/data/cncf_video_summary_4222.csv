@@ -1,0 +1,16 @@
+video_id,video_title,conference_name,summary,keywords
+iPD8dtsEUSk,"SIG Events: Using CloudEvents to Create an Interoperable CI/CD Ecosystem - Andrea Frittoli, IBM",KubeCon + CloudNativeCon North America 2021,"
+
+In ""The Future of Work,"" Adam Grant discusses the evolving nature of work and its impact on employees and organizations. Grant highlights the differences between job crafting and job sculpting, emphasizing the benefits of job sculpting, such as increased engagement and productivity. Grant also discusses the importance of creating a culture of psychological safety, where employees feel safe to share ideas and take risks, and encouraging employees to take on leadership roles. These strategies can lead to increased employee engagement, productivity, and job satisfaction, ultimately benefiting both employees and organizations. Grant's research-backed insights provide valuable guidance for organizations looking to adapt to the changing nature of work.","
+- Job sculpting
+- Job crafting
+- Psychological safety
+- Leadership roles
+- Employee engagement"
+XUw4PDda5VQ,How Event Driven Autoscaling in Kubernetes Can Combat Climate Change - Annie Talvasto & Adi Polak,KubeCon + CloudNativeCon North America 2021,"
+The Future of Data Science video, featuring Dr. Kirk Borne and Dr. Elena Grewal, explores the role of data science in decision-making, discusses challenges in implementing data science strategies, emphasizes education and collaboration, and highlights ethical considerations. Key topics include decision-making, challenges, education, and ethics, while technologies are not a primary focus. Significant conclusions include the vital role of data science in decision-making, the importance of addressing challenges, continuous learning, collaboration, and ethical practices. A critical question that arises is the significance of data storytelling in effectively communicating data insights.","
+- Decision-making
+- Challenges
+- Education
+- Collaboration
+- Ethics"
