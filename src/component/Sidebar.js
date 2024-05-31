@@ -88,7 +88,7 @@ const fetchConferences = () => {
                   {/* Render conference items */}
                   {conferences.map((conference, index) => (
                     <li key={index} className="py-1">
-                      <Link href={'/'+ conference.video_id}>
+                      <Link href={'/conferences/'+ conference.video_id}>
                         <button type="button" className={`flex items-center p-2 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 ${selectedDropDownButton === conference.video_id ? 'bg-blue-500 text-black' : ''}`} onClick={() => handleDropdownButtonClick(conference.video_id)}>
                          {conference.conference_name}
                         </button>

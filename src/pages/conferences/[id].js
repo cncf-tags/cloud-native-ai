@@ -1,5 +1,4 @@
 // pages/conferences/[id].js
-
 import { useRouter } from 'next/router';
 import Papa from 'papaparse';
 
@@ -34,8 +33,9 @@ export async function getStaticPaths() {
         }
         const csvText = await response.text();
         const { data: videos } = Papa.parse(csvText, { header: true });
+        const validVideos = videos.filter(video => video.video_id.trim() !== '');
 
-        const paths = videos.map((video) => ({
+        const paths = validVideos.map((video) => ({
             params: { id: video.video_id },
         }));
 
