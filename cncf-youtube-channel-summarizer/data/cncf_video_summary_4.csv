@@ -1,0 +1,46 @@
+video_id,video_title,conference_name,summary,keywords
+GEeodHEOmvA,Visualizing Kubernetes with Generated Diagrams,KCD Los Angeles 2024,"
+
+This talk focuses on the concept of a declarative interface in Kubernetes and the utility of diagrams for visualizing Kubernetes resources and architecture. The speaker introduces two tools for generating diagrams of Kubernetes resources, Kate's viz and Cube CTL graph, which generate graphviz or PNG and Mermaid or graphviz diagrams, respectively. The talk highlights the importance of understanding the relationships between Kubernetes resources for effective management and troubleshooting, and the potential for these tools to simplify the cognitive complexity of distributed workloads and container-centric architecture. The talk also touches on potential improvements for the tools, including better packaging and support for custom resources.
+
+Key concepts discussed: declarative interface, distributed workloads, container-centric architecture, relationships between resources
+
+Key technologies mentioned: Kubernetes, OpenShift, Java corcus, Tecton pipelines, Go, Cube CTL graph, Kate's viz, graphviz, Mermaid
+
+Significant conclusions or future trends: diagrams can be a valuable tool in visualizing Kubernetes resources and architecture, and Kate's viz and Cube CTL graph are useful tools for generating these diagrams.
+
+Critical questions or answers: What is the concept of a declarative interface in Kubernetes? How can diagrams help in understanding Kubernetes resources and architecture? What are some useful tools for generating diagrams of Kubernetes resources? How can these tools be improved?","
+- Declarative Interface
+- Kubernetes
+- Diagrams
+- Kate's viz
+- Cube CTL graph"
+N5UYCkMnQ60,Power Up With Podman,KCD Los Angeles 2024," 
+
+Title: The Future of AI Governance
+Presenters: Virginia Dignum, Umeå University; Francesca Rossi, IBM; and John Havens, The IEEE Global Initiative on Ethics of Autonomous and Intelligent Systems
+Event: The AI Summit
+
+Summary:
+The Future of AI Governance panel discussion features Virginia Dignum from Umeå University, Francesca Rossi from IBM, and John Havens from The IEEE Global Initiative on Ethics of Autonomous and Intelligent Systems. The discussion focuses on the importance of responsible AI and AI governance, as well as the need for a global AI ethics framework. The panelists highlight the following points:
+
+1. **Responsible AI**: The panelists emphasize the importance of creating responsible AI systems that consider ethical implications and social impact.
+
+2. **AI Governance**: The panelists discuss the need for AI governance and the challenges of implementing effective governance frameworks. They also consider the role of government, industry, and academia in AI governance.
+
+3. **AI Ethics**: The panelists explore the concept of AI ethics, including principles such as fairness, accountability, and transparency. They also discuss the complexities of applying ethical principles to real-world AI systems.
+
+4. **Global AI Ethics Framework**: The panelists consider the need for a global AI ethics framework to ensure consistency and effectiveness in AI governance. They discuss the potential benefits and challenges of such a framework.
+
+5. **AI Ethics Standards**: The panelists discuss existing AI ethics standards, including IEEE's P7000 series of standards and the EU's Ethics Guidelines for Trustworthy AI. They also consider the importance of collaboration and consensus in developing AI ethics standards.
+
+6. **AI Governance Challenges**: The panelists discuss several challenges in implementing effective AI governance, including the need for a common language and understanding, cultural and regional differences, and the potential for unintended consequences.
+
+7. **AI Governance Best Practices**: The panelists share several best practices for AI governance, including the need for transparency, accountability, and ongoing monitoring and evaluation.
+
+Overall, this panel discussion highlights the critical importance of AI governance and ethics in shaping the future of AI. It underscores","
+- Responsible AI
+- AI Governance
+- AI Ethics
+- Global AI Ethics Framework
+- AI Ethics Standards"

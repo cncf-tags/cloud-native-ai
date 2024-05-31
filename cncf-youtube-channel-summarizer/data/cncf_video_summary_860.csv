@@ -1,0 +1,30 @@
+video_id,video_title,conference_name,summary,keywords
+OvLHzfMig-k,"Keynote: Hot Dog! The Technical Oversight... - Duffie, Ricardo, Alolita, Pushkar, Catherine",KubeCon + CloudNativeCon NA 2023,"
+The Cloud Native Computing Foundation (CNCF) Technical Oversight Committee (TOC) is responsible for evaluating projects for inclusion in the CNCF and supporting them once they are part of the foundation. The TOC is supported by Technical Advisory Groups (TAGs) that focus on different domains such as security, contributor strategy, and observability. The TOC is working on automating the gathering of information about project health and re-evaluating the existing maturity level structure. TOC members and leaders of TAGs discussed their involvement and the rewards of their work, as well as collaboration in working groups such as the Deen heart of hearing working group.
+
+Key technologies mentioned include cloud native computing, technical advisory groups, and working groups. The main topics discussed are the work of the TOC and TAGs, the automation of information gathering, and collaboration in working groups. The speakers highlight the rewarding nature of their work and the importance of collaboration in the CNCF ecosystem.
+
+No critical questions or answers were discussed in the provided text.","
+- Cloud Native Computing
+- Technical Oversight Committee (TOC)
+- Technical Advisory Groups (TAGs)
+- Working Groups
+- Collaboration"
+RN-U4gwXgq4,Keynote: Closing Remarks,KubeCon + CloudNativeCon NA 2023,"
+CubeCon, a community-driven event focused on cloud-native applications, is celebrating its continued growth and success. The outgoing co-chair, Frederick, is honored for his contributions, and Casper Bor takes over as the new co-chair. The upcoming CubeCon events are announced, taking place in Paris and Salt Lake City. For the first time, poster sessions will be held at CubeCon Paris. The importance of community engagement and feedback is emphasized, with a call to submit poster sessions. The event concludes with appreciation for the speakers and sponsors, and a look forward to future CubeCon and Cloud Native Con events.
+
+Key Technologies: Cloud-native applications
+
+Future Trends: Continued growth and success of CubeCon and Cloud Native Con events.","
+- CubeCon
+- Cloud-native applications
+- Community-driven event
+- Poster sessions
+- Future CubeCon and Cloud Native Con events"
+CG5b07mAJPw,"SIG-Multicluster Intro and Deep Dive - Jeremy Olmsted-Thompson, Google & Stephen Kitt, Red Hat",KubeCon + CloudNativeCon NA 2023,"
+The Kubernetes Multicluster SIG at CNCF North America 2023 focuses on enabling use cases for multiple clusters, such as exposing workloads and sharing metadata between them. The Sig aims to identify core primitives and semantics for describing multicluster scenarios without imposing specific implementations. Key projects include a new website, cluster set, an API for metadata (the About API), multicluster services, and building blocks for orchestration in the multicluster space. The Sig encourages participation from diverse backgrounds and can be engaged with through the website at multicluster.doig.io.","
+- Kubernetes
+- Multicluster SIG
+- Multiple clusters
+- Core primitives
+- Metadata sharing"

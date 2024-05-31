@@ -1,0 +1,14 @@
+video_id,video_title,conference_name,summary,keywords
+kbPEE33HEHw,"Three Years of Lessons Running Potentially Malicious Code Inside Containers - Ben Hall, Katacoda",KubeCon + CloudNativeCon China 2018 (Shanghai),"
+
+The speakers in this video segment emphasize the importance of understanding user needs and expectations when designing voice user interfaces (VUIs). They highlight the challenges in designing for voice, such as the lack of visual cues and the need to accommodate various accents and languages. The speakers mention key technologies, including natural language processing (NLP), automatic speech recognition (ASR), and text-to-speech (TTS) systems. They stress the need for testing and iterating VUI designs with real users to ensure a positive user experience. Future trends in VUI design may include the use of machine learning to personalize interactions and the integration of voice interfaces with other modalities, such as touch and gesture. The critical question addressed during the discussion is how to balance the need for accuracy and naturalness in voice interactions, with the speakers concluding that striking a balance between these two factors is essential to create a satisfying user experience.","
+- Voice User Interfaces (VUIs)
+- User Needs and Expectations
+- Natural Language Processing (NLP)
+- Automatic Speech Recognition (ASR)
+- Text-to-Speech (TTS) Systems
+- Testing and Iteration
+- Machine Learning
+- Personalization
+- Touch and Gesture
+- Accuracy and Naturalness Balance"

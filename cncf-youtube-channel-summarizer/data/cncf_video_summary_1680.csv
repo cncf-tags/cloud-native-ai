@@ -1,0 +1,8 @@
+video_id,video_title,conference_name,summary,keywords
+91v9dQkdwwE,Lightning Talk: Swarup,KCD Bengaluru 2023,"
+The main topic of this discussion is the introduction of the Evented Plague feature in Kubernetes, which is currently in beta as of Kubernetes 1.27. The key technology mentioned is the use of grpc events to reduce resource consumption and polling required for the Plague feature. This feature increases the relisting interval from 1 second to 5 minutes, using a cache that caches pod statuses and updates the cache when it receives pod statuses, which are then propagated to the rest of the system. The future improvements of this feature include using a stateful cache and an event-driven cache instead of relying on polling. The discussion also covered enabling and testing this feature in a system.","
+- Evented Plague feature
+- Kubernetes 1.27
+- grpc events
+- resource consumption
+- polling reduction"

@@ -1,0 +1,45 @@
+video_id,video_title,conference_name,summary,keywords
+PNILXc3YDPQ,Workshop:  Hands-on Kubernetes,KCD Los Angeles 2024," This transcript focuses on the architecture and components of Kubernetes, an open-source platform for containerized applications. Key technologies mentioned include etcd, controllers, pods, Kubernetes API, and CLI (kubectl). Kubernetes is a pragmatic platform with a high degree of flexibility, able to run various types of workloads and serve as a foundation for building custom platforms. Its API and CLI provide a centralized interface for managing resources, using YAML as a human-readable data serialization format. The presenter emphasizes Kubernetes' role as a platform for building platforms, with a wide range of Lego-like building blocks that can be combined to create complex systems.","
+- Kubernetes
+- etcd
+- controllers
+- pods
+- Kubernetes API
+- CLI (kubectl)
+- platform
+- flexibility
+- workloads
+- building blocks"
+n_SncasXnAA,Ceph Storage: a Caffeinated Primer,KCD Los Angeles 2024,"
+
+The speakers in this presentation focus on Ceph's Rados Block Device (RBD) technology, highlighting its ability to mirror data between different storage clusters and provide exact crash-coherent copies of data. They also discuss RBD mirroring, RBD top tool, and setting quotas on users and volumes. The speakers briefly introduce SEPH, a distributed network filesystem that looks like a POSIX file system when mounted in a POSIX environment. They also mention the ability to run CEPH FS in different clusters, which are targeted at different monitors and are wholly independent from each other. The speakers demonstrate creating a small CEPH cluster using three virtual machines, deploying OSDs, monitors, and rados gateway, creating a user, creating a bucket, and copying a file to the bucket using the AWS CLI. The speakers also discuss uid translation in CEPH FS and demonstrate creating a dashboard user for the manager module to get statistics and creating a user for accessing the rados gateway.
+
+Key Technologies:
+- Ceph Rados Block Device (RBD)
+- RBD mirroring
+- RBD top tool
+- SEPH (Scalable POSIX-compliant hierarchical storage)
+- CEPH File System (CEPH FS)
+- Rados Gateway
+
+Significant Conclusions:
+- Ceph RBD technology provides exact crash-coherent copies of data through mirroring data between different storage clusters.
+- RBD mirroring is used to consume the journal of an RBD mirror and write it out as a rados client to a different SE cluster.
+- CEPH FS can run on commodity hardware and can be installed on a Linux server.
+- CEPH FS is extremely flexible and can be used in a variety of deployment scenarios, including on virtual machines.
+- CEPH FS has a dashboard user for the manager module to get statistics and a user for accessing the rados gateway.
+
+Future Trends:
+- Continued development of Ceph's distributed storage system and its associated technologies.
+- Increased use of distributed storage systems for scalability, resilience, and elasticity.
+- Integration of distributed storage systems with other technologies, such as virtual machines and cloud environments.
+
+Critical Questions / Answers:
+
+Q:","
+- Ceph Rados Block Device (RBD)
+- RBD mirroring
+- RBD top tool
+- SEPH
+- CEPH File System (CEPH FS)
+- Rados Gateway"

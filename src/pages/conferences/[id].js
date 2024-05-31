@@ -1,4 +1,5 @@
 // pages/conferences/[id].js
+
 import { useRouter } from 'next/router';
 import Papa from 'papaparse';
 
@@ -33,6 +34,7 @@ export async function getStaticPaths() {
         }
         const csvText = await response.text();
         const { data: videos } = Papa.parse(csvText, { header: true });
+      
         // Filter out any videos with empty video_id
         const validVideos = videos.filter(video => video.video_id.trim() !== '');
         const paths = validVideos.map((video) => ({

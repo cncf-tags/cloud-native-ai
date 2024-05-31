@@ -1,0 +1,69 @@
+video_id,video_title,conference_name,summary,keywords
+THT1jabtCdI,"What's New in gRPC - Kevin Nilson & Gina Yeh, Google; Richard Belleville, Independent",KubeCon + CloudNativeCon NA 2023,"
+The video is a presentation on gRPC, an open-source high-performance remote procedure call (RPC) framework developed by Google. The presenter discusses the benefits of using gRPC, including its performance, scalability, and flexibility in building distributed systems. They also highlight the use of protocol buffers as the default serialization format in gRPC, providing efficient and reliable data transfer between services.
+The presenter emphasizes the importance of community feedback in improving gRPC and encourages the audience to reach out with their thoughts and suggestions. Overall, the presentation underscores the value of using gRPC as a powerful tool in building modern, distributed systems that can handle the demands of today's digital world.
+Key Technologies:
+- gRPC: an open-source high-performance remote procedure call (RPC) framework developed by Google.
+- Protocol Buffers: a language-neutral data serialization format developed by Google, used as the default serialization format in gRPC.
+Critical Questions/Answers:
+- Q: How can users provide feedback to improve gRPC?
+- A: Users can reach out to the gRPC community through the mailing list or Twitter to provide feedback and suggestions.","
+- gRPC
+- Remote Procedure Call (RPC)
+- Protocol Buffers
+- Data Serialization
+- Community Feedback"
+-DN7LQCn7aU,Real-World Knative: Success Stories from Production Environments...,KubeCon + CloudNativeCon NA 2023,"
+
+The speakers are discussing the use of serverless functions and the Eventing model for managing workflows in high-energy physics experiments. This new approach aims to simplify the process for users and allow for easier software updates and version management by system administrators. The speakers invite the audience to join their community for tutorials and further information, and encourage feedback on their session.
+
+KEY TECHNOLOGIES:
+
+* Serverless functions
+* Eventing model
+* High-energy physics experiments
+
+SIGNIFICANT CONCLUSIONS/FUTURE TRENDS:
+
+* The new approach using serverless functions and the Eventing model simplifies workflow management for high-energy physics experiments.
+* The speakers invite the audience to join their community for tutorials and further information.
+* Feedback on the session is encouraged.","
+- Serverless functions
+- Eventing model
+- High-energy physics experiments
+- Workflow management
+- Community engagement"
+RggqaCSdOGA,What's New with Kubectl and Kustomize … and How You Can Help!,KubeCon + CloudNativeCon NA 2023,"
+The speakers discuss the potential for using Kubernetes to create standardized developer environments, addressing the challenges of customizing individual developer environments on laptops or self-provided machines. They propose using a bootstrap script, named ""L"", to initialize a standardized environment and explore the idea of implementing a system similar to Unix, with system-wide and user-specific directories for customization. The main conclusion is the potential for using ""L"" to create consistent developer environments in Kubernetes, with future trends including expanding the bootstrap script's capabilities and exploring the use of directories in Kubernetes. Key technologies mentioned include Kubernetes, Unix systems, and user directories.","
+- Kubernetes
+- Developer environments
+- Bootstrap script ""L""
+- Unix systems
+- User directories"
+X1wL8CLbIzc,Contour Project Update: Highlighting New Features and Community Contr... Sunjay Bhatia & Nigel Brown,KubeCon + CloudNativeCon NA 2023,"
+
+The video features a conversation between Dr. David E. Shaw, Founder and CEO of D. E. Shaw Research, and Dr. James Manyika, Chairman and Director of the McKinsey Global Institute. They discuss the potential impact of artificial intelligence (AI) and quantum computing on society, economy, and scientific research.
+
+Key topics discussed:
+- The potential of AI and quantum computing to revolutionize various industries, including healthcare, finance, and materials science.
+- The importance of responsible AI development and deployment to address ethical concerns and prevent potential misuse.
+- The need for interdisciplinary collaboration and public-private partnerships to advance AI and quantum computing research and ensure societal benefits.
+
+Technologies mentioned:
+- Artificial Intelligence (AI)
+- Quantum Computing
+
+Significant conclusions or future trends highlighted:
+- AI and quantum computing have the potential to significantly impact various industries and scientific research, offering new opportunities and challenges.
+- Responsible AI development and deployment require addressing ethical concerns, ensuring data privacy and security, and promoting transparency and accountability.
+- Interdisciplinary collaboration and public-private partnerships are crucial to advance AI and quantum computing research and ensure societal benefits.
+
+Critical questions or answers:
+- Dr. James Manyika emphasizes the need to consider the potential impact of AI and quantum computing on job displacement and workforce transformation.
+- Dr. David E. Shaw highlights the importance of developing quantum algorithms that can solve real-world problems and provide practical benefits.
+``` bye bye bye```","
+- Artificial Intelligence (AI)
+- Quantum Computing
+- Interdisciplinary Collaboration
+- Responsible AI
+- Scientific Research"
