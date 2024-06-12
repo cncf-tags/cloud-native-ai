@@ -6,3 +6,6 @@ tenacity==8.2.3
 tqdm==4.64.0
 youtube_transcript_api==0.6.2
 transformers==4.41.1
+nltk==3.8.1
+rank_bm25==0.2.2
+sentence_transformers==3.0.1
