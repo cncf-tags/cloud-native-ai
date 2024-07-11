@@ -30,7 +30,7 @@ const Sidebar = () => {
 
 // Function to fetch conference data from CSV file
 const fetchConferences = () => {
-  fetch('https://raw.githubusercontent.com/cncf-tags/cloud-native-ai/main/cncf-youtube-channel-summarizer/data/cncf_video_summary_29.csv')
+  fetch('https://raw.githubusercontent.com/cncf-tags/cloud-native-ai/main/cncf-youtube-channel-summarizer/data/cncf_video_summary_combine.csv')
     .then((response) => {
       if (!response.ok) {
         throw new Error('Network response was not ok');
