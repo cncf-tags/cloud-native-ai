@@ -29,7 +29,7 @@ export default function Conference({ conferences, allVideos }) {
 
 export async function getStaticPaths() {
     try {
-        const response = await fetch('https://raw.githubusercontent.com/cncf-tags/cloud-native-ai/main/cncf-youtube-channel-summarizer/data/cncf_video_summary_combine.csv.csv');
+        const response = await fetch('https://raw.githubusercontent.com/cncf-tags/cloud-native-ai/main/cncf-youtube-channel-summarizer/data/cncf_video_summary_combine.csv');
         if (!response.ok) {
             throw new Error('Failed to fetch CSV');
         }
