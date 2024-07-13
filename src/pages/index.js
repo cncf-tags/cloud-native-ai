@@ -11,7 +11,7 @@ const Home = () => {
 
   return (
     <div style={{ backgroundColor: '#F0F8FF' }}>
-      <main className="">
+      <main className="flex-grow ml-64 relative">
         {data && <ForceGraph data={data} src="/conference-dashboard"/>}
       </main>
     </div>

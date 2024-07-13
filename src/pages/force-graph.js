@@ -31,7 +31,7 @@ const ForceGraph = ({ data }) => {
     const nodes = Array.from(nodesSet).map(keyword => ({ id: keyword }));
 
     // Set up the SVG dimensions
-    const width = 1500;
+    const width = 1000;
     const height = 900;
 
     // Create the SVG container
@@ -47,7 +47,7 @@ const ForceGraph = ({ data }) => {
     const simulation = d3.forceSimulation(nodes)
       .force('link', d3.forceLink(links).id((d) => d.id).distance(350)) 
       .force('charge', d3.forceManyBody())
-      .force('center', d3.forceCenter(width / 3, height / 2));
+      .force('center', d3.forceCenter(width / 4, height / 2));
 
     // Create the links
     const link = svgContainer.append('g')
