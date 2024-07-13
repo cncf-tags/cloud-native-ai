@@ -56,3 +56,43 @@ p strong {
     text-wrap: balance;
   }
 }
+
+/* components/SearchList.module.css */
+
+.results {
+  width: 100%;
+  margin-top: 0px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  max-height: 220px;
+  min-height:0px;
+  overflow-y: scroll;
+}
+
+.result-item {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  transition: background-color 0.3s;
+}
+
+.result-item:last-child {
+  border-bottom: none;
+}
+
+.result-item:hover {
+  background-color: #F0F8FF;
+}
+
+.result-item p {
+  margin: 0;
+  font-size: 16px;
+}
+
+.no-results {
+  text-align: center;
+  color: #999;
+}
