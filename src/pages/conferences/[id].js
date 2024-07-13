@@ -17,6 +17,7 @@ export default function Conference({ conferences, allVideos }) {
             <h1>{conferences[0].conference_name}</h1>
             {sameConferences.map((conference, index) => (
                 <div key={index} className="conference">
+                    <p><strong>Video Title:</strong> {conference.video_title}</p>
                     <p><strong>Video Link:</strong> <a href={`https://www.youtube.com/watch?v=${conference.video_id}`} target="_blank" rel="noopener noreferrer">{`https://www.youtube.com/watch?v=${conference.video_id}`}</a></p>
                     <p><strong>Video Summary:</strong> {conference.summary}</p>
                     <p>-------------------------</p>
@@ -29,7 +30,7 @@ export default function Conference({ conferences, allVideos }) {
 
 export async function getStaticPaths() {
     try {
-        const response = await fetch('https://raw.githubusercontent.com/cncf-tags/cloud-native-ai/main/cncf-youtube-channel-summarizer/data/cncf_video_summary_29.csv');
+        const response = await fetch('https://raw.githubusercontent.com/cncf-tags/cloud-native-ai/main/cncf-youtube-channel-summarizer/data/cncf_video_summary_combine.csv');
         if (!response.ok) {
             throw new Error('Failed to fetch CSV');
         }
@@ -57,7 +58,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
     try {
-        const response = await fetch('https://raw.githubusercontent.com/cncf-tags/cloud-native-ai/main/cncf-youtube-channel-summarizer/data/cncf_video_summary_29.csv');
+        const response = await fetch('https://raw.githubusercontent.com/cncf-tags/cloud-native-ai/main/cncf-youtube-channel-summarizer/data/cncf_video_summary_combine.csv');
         if (!response.ok) {
             throw new Error('Failed to fetch CSV');
         }
