@@ -1,13 +1,12 @@
-// components/Navbar.js
-
 import { useState } from "react";
 import { FaSearch } from "react-icons/fa";
 import Papa from "papaparse";
-import SearchList from "./SearchList"; // Ensure this path is correct
+import SearchList from "./SearchList";
 
 const Navbar = () => {
   const [input, setInput] = useState("");
   const [results, setResults] = useState([]);
+  const [isVisible, setIsVisible] = useState(true);
 
   const fetchData = (value) => {
     fetch("https://raw.githubusercontent.com/cncf-tags/cloud-native-ai/main/cncf-youtube-channel-summarizer/data/cncf_video_summary_combine.csv")
@@ -32,32 +31,34 @@ const Navbar = () => {
       });
   };
 
-  const handleSearchSelect = (name) => {
-    setInput(name);
-    setResults({name});
-  };
-
   const handleChange = (value) => {
     setInput(value);
     if (value) {
+      setIsVisible(true);
       fetchData(value);
     } else {
       setResults([]);
     }
   };
 
+  const handleSelect = (conferenceName) => {
+    setInput(conferenceName);
+    setIsVisible(false);
+  };
+
   return (
-    <div>
-      <div className="flex-grow">
+    <div className='navbar'>
+      <div className="search-input">
         <input
           type="text"
           className="w-full bg-white text-gray-600 px-4 py-2 rounded-md"
           placeholder="Type to search conference names..."
           value={input}
           onChange={(e) => handleChange(e.target.value)}
-        /><FaSearch id="search-icon" />
+        />
+        <FaSearch id="search-icon" className="ml-2 text-gray-500" />
       </div>
-      {input && <SearchList results={results} onSearchSelect={handleSearchSelect}/>}
+      {isVisible && input && <SearchList results={results} onSearchSelect={handleSelect} />}
     </div>
   );
 };

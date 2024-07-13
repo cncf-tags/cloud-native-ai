@@ -31,7 +31,7 @@ const ForceGraph = ({ data }) => {
     const nodes = Array.from(nodesSet).map(keyword => ({ id: keyword }));
 
     // Set up the SVG dimensions
-    const width = 900;
+    const width = 1500;
     const height = 900;
 
     // Create the SVG container
