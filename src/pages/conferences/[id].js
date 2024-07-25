@@ -17,6 +17,7 @@ export default function Conference({ conferences, allVideos }) {
             <h1>{conferences[0].conference_name}</h1>
             {sameConferences.map((conference, index) => (
                 <div key={index} className="conference">
+                    <br />
                     <div>
                         <div className="video-container">
                             <iframe
@@ -30,7 +31,7 @@ export default function Conference({ conferences, allVideos }) {
                             ></iframe>
                         </div>
                     </div>
-                    <br/>
+                    <br />
                     <p><strong>Title:</strong> {conference.video_title}</p>
                     <p><strong>Summary:</strong> {conference.summary}</p>
                     <p>-------------------------</p>
@@ -49,10 +50,11 @@ export async function getStaticPaths() {
         const csvText = await response.text();
         const { data: videos } = Papa.parse(csvText, { header: true });
 
+        // Filter out any videos with empty video_id
+        const validVideos = videos.filter(video => video.video_id.trim() !== '');
         // Filter out duplicates by video_id
-        const uniqueVideos = Array.from(new Set(videos.map(video => video.video_id)))
-                                  .map(id => videos.find(video => video.video_id === id));
-
+        const uniqueVideos = Array.from(new Set(validVideos.map(video => video.video_id)))
+        .map(id => validVideos.find(video => video.video_id === id));
         const paths = uniqueVideos.map((video) => ({
             params: { id: video.video_id },
         }));
@@ -81,8 +83,7 @@ export async function getStaticProps({ params }) {
 
         // Filter out duplicates by video_id
         const uniqueVideos = Array.from(new Set(videos.map(video => video.video_id)))
-                                  .map(id => videos.find(video => video.video_id === id));
-
+        .map(id => videos.find(video => video.video_id === id));
         const conferences = uniqueVideos.filter((video) => video.video_id === params.id);
         if (conferences.length === 0) {
             return {
